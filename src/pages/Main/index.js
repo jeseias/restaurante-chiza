@@ -4,6 +4,7 @@ import Header from './../../layout/Header';
 import Menu from './../../layout/Menu';
 import Clientes from './../../layout/Clientes';
 import Planos from './../../layout/Planos';
+import Testemunhos from './../../layout/Testemunhos';
 
 export default () => {
   return (
@@ -12,6 +13,7 @@ export default () => {
       <Menu />
       <Clientes />
       <Planos />
+      <Testemunhos />
     </>
   )
 }
