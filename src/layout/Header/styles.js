@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 
 import { dark_color, light_gray, transparent_color } from './../../styles/variables';
-import { PositionAbsoluteCenter } from './../../styles/mixins';
+import { PositionAbsoluteCenter, BackgroundImage } from './../../styles/mixins';
  
 export const Container = styled.header`
-  width: 100%; 
-  min-height: 650px;
+  ${props => BackgroundImage(props.BG)};
   position: relative;
+  min-height: 650px;
+  width: 100%; 
+  color: #fff;
 `;
 
 export const TopHeader = styled.div`
@@ -15,6 +17,7 @@ export const TopHeader = styled.div`
   width: 100%;
   color: ${light_gray}; 
   font-size: 1.2em;
+  z-index: 10;  
 
   display: flex;
   justify-content: space-around;
@@ -26,7 +29,7 @@ export const Navagation = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 0 .4rem rgba(0,0,0, .5);
+  box-shadow: 0 0 .4rem rgba(0,0,0, .9);
 
   ul { 
     margin: 0;
