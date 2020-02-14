@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import bg from './../../assets/images/bg/bg0.jpg';
 
 import { MdEmail, MdPhone, MdLocationOn } from 'react-icons/md';
-import { FaFacebookSquare, FaInstagram, FaLinkedinIn, FaBars  } from 'react-icons/fa';
+import { FaFacebookSquare, FaInstagram, FaLinkedinIn, FaBars, FaTwitterSquare  } from 'react-icons/fa';
 
 import { Container, TopHeader, Navagation, HeaderContent } from './styles';
 
@@ -29,6 +29,7 @@ export default () =>
         <FaFacebookSquare size={20} />
         <FaInstagram size={20} />
         <FaLinkedinIn size={20} />
+        <FaTwitterSquare size={20} />
       </div>
     </TopHeader>
  
