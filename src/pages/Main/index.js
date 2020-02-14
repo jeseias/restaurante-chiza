@@ -5,6 +5,7 @@ import Menu from './../../layout/Menu';
 import Clientes from './../../layout/Clientes';
 import Planos from './../../layout/Planos';
 import Testemunhos from './../../layout/Testemunhos';
+import Sobre from './../../layout/Sobre';
 
 export default () => {
   return (
@@ -14,6 +15,7 @@ export default () => {
       <Clientes />
       <Planos />
       <Testemunhos />
+      <Sobre />
     </>
   )
 }
