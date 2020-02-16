@@ -13,3 +13,5 @@ export const dark_color = '#232323'
 export const dark_blue = '#2C3F4C';
 export const blue_color = '#248bcc';
 export const red_color_2 = '#ca3435';
+
+export const t_dark_blue = 'rgba(44, 63, 76, 0.808)';
