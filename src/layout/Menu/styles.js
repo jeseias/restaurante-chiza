@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import { dark_brown } from './../../styles/variables'; 
+import { BackgroundImage } from './../../styles/mixins'; 
 
 export const Container = styled.section`
   padding: 2rem 5rem;
@@ -34,11 +35,17 @@ export const Platebox = styled.div`
     "img description description"
     "img price btn";
   margin-bottom: 2rem; 
+  background: #fff;
+  padding: 2rem;
   
-  img {
+  .img {
+    display: block;
+    ${props => BackgroundImage(props.BG)};
     grid-area: img;
     border-radius: 100%;
     border: 2px solid #333;
+    width: 100%;
+    height: 100%;
   }
 
   .title {

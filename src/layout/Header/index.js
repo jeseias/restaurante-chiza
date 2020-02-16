@@ -30,7 +30,8 @@ export default () =>
         <h1>Recebe-se, e servi-se com amor</h1>
         <div>
           <p>
-            Um certamente não pode pensar, <br />
+            Sem medo de errar. <br/> 
+            Um certamente, <br/> não pode pensar bem, <br />
             amar bem, agir bem, <br />
             senão comer bem.
           </p>
