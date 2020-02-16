@@ -11,11 +11,11 @@ import { Container, Platebox } from './styles';
 
 export default () => 
   <Container>
-    <h1>As Delicias de Hoje</h1>
+    <h1 className="MainTitle">As Delicias de Hoje</h1>
     <div>
       <Platebox BG={f}>
         <div className="img" ></div>
-        <div className="title">Arroz com Feijao</div>
+        <div className="title SecondaryTitle">Arroz com Feijao</div>
         <p className="description">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repudiandae architecto similique.
         </p>
@@ -24,7 +24,7 @@ export default () =>
       </Platebox>
       <Platebox BG={f1}>
         <div className="img" ></div>
-        <div className="title">Arroz com Feijao</div>
+        <div className="title SecondaryTitle">Arroz com Feijao</div>
         <p className="description">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repudiandae architecto similique.
         </p>
@@ -33,7 +33,7 @@ export default () =>
       </Platebox>
       <Platebox BG={f2}>
         <div className="img" ></div>
-        <div className="title">Arroz com Feijao</div>
+        <div className="title SecondaryTitle">Arroz com Feijao</div>
         <p className="description">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repudiandae architecto similique.
         </p>
@@ -42,7 +42,7 @@ export default () =>
       </Platebox>
       <Platebox BG={f3}>
         <div className="img" ></div>
-        <div className="title">Arroz com Feijao</div>
+        <div className="title SecondaryTitle">Arroz com Feijao</div>
         <p className="description">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repudiandae architecto similique.
         </p>
@@ -51,7 +51,7 @@ export default () =>
       </Platebox>
       <Platebox BG={f4}>
         <div className="img" ></div>
-        <div className="title">Arroz com Feijao</div>
+        <div className="title SecondaryTitle">Arroz com Feijao</div>
         <p className="description">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repudiandae architecto similique.
         </p>
@@ -60,7 +60,7 @@ export default () =>
       </Platebox>
       <Platebox BG={f5}>
         <div className="img" ></div>
-        <div className="title">Arroz com Feijao</div>
+        <div className="title SecondaryTitle">Arroz com Feijao</div>
         <p className="description">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repudiandae architecto similique.
         </p>

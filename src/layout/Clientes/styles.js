@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { light_gold, light } from './../../styles/variables';
+import { light } from './../../styles/variables';
 
 export const Container = styled.section`
   padding: 1rem 5rem;
