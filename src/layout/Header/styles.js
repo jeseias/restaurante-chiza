@@ -1,35 +1,30 @@
 import styled from 'styled-components';
 
-import { dark_color, light_gray, transparent_color } from './../../styles/variables';
+import { yellow_color, dark_brown, light_gold } from './../../styles/variables';
 import { PositionAbsoluteCenter, BackgroundImage } from './../../styles/mixins';
+import { SmoothTransition } from './../../styles/utils';
  
 export const Container = styled.header`
-  ${props => BackgroundImage(props.BG)};
+  ${props => BackgroundImage(props.BG)};  
   position: relative;
   min-height: 650px;
   width: 100%; 
-  color: #fff;
-`;
-
-export const TopHeader = styled.div`
-  background: ${dark_color};
-  height: 25px;
-  width: 100%;
-  color: ${light_gray}; 
-  font-size: 1.2em;
-  z-index: 10;  
-
-  display: flex;
-  justify-content: space-around;
-`;
+  color: ${light_gold};
+`; 
 
 export const Navagation = styled.nav`
-  background: ${transparent_color};
-  padding: 2rem 5rem;
+  background: ${dark_brown}; 
+  padding: 1rem 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 0 .4rem rgba(0,0,0, .9);
+  box-shadow: 0 .5rem .5rem rgba(0,0,0, .4);
+    font-family: 'Dancing Script';
+
+  h1 {
+    font-size: 3rem;
+    letter-spacing: 4px;
+  }
 
   ul { 
     margin: 0;
@@ -39,8 +34,10 @@ export const Navagation = styled.nav`
       padding: 1rem; 
       text-decoration: none;
       color: #fff;
-      margin-right: 1rem;
-      text-align: center;
+      margin-right: .5rem;
+      text-align: center;  
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
 
     .nav-bar {
@@ -50,15 +47,20 @@ export const Navagation = styled.nav`
 `;
 
 export const HeaderContent = styled.div`
-  ${PositionAbsoluteCenter(55,50)};
-  background: linear-gradient( 290deg  , #0012, rgba(0,0,0, .4));
+  ${PositionAbsoluteCenter(55,50)};   
   border-radius: 2rem;
   width: 70%;
   height: 70%;
-  padding: 2rem; 
+  padding: 2rem;  
+  font-family: 'Dancing Script';
   
   h1 {
     text-align: center;
+    font-size: 5rem;   
+    text-shadow: 0 0 .1rem #f4f4f4;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 0 .5rem #333;
   }
 
   > div {
@@ -71,5 +73,29 @@ export const HeaderContent = styled.div`
     align-items: center;
     align-content: center; 
     height: 100%; 
+
+    p {
+      font-size: 3rem;
+      letter-spacing: 2px;
+      font-weight: bold;
+      text-shadow: 0 0 .5rem #333; 
+    }
+
+    button {
+      border: none;
+      color: #fff;
+      padding: 1rem 2rem;
+      text-align: center;
+      font-size: 2rem;
+      border-radius: 3rem;
+      background: ${yellow_color};
+      box-shadow: 0 .5rem .6rem ${dark_brown};
+      ${SmoothTransition}; 
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+      }
+    }
   }
 `;
