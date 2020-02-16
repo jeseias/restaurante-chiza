@@ -2,37 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import bg from './../../assets/images/bg/bg.jpg';
+ 
+import { FaBars   } from 'react-icons/fa';
 
-import { MdEmail, MdPhone, MdLocationOn } from 'react-icons/md';
-import { FaFacebookSquare, FaInstagram, FaLinkedinIn, FaBars, FaTwitterSquare  } from 'react-icons/fa';
-
-import { Container, TopHeader, Navagation, HeaderContent, Info, Social } from './styles';
+import { Container, Navagation, HeaderContent } from './styles';
 
 export default () => 
-  <Container BG={bg}>
-    {/* <TopHeader>
-      <Info>
-        <div>
-          <MdEmail size={20} className='icon' />
-          <p>restaurantechiza@outlook.com</p>
-        </div>
-        <div>
-          <MdPhone size={20} className='icon' />
-          <p>912516269/923516269</p>
-        </div>
-        <div>
-          <MdLocationOn size={20} className='icon' />
-          <p>Entrada do Sequele</p>
-        </div>
-      </Info>
-      <Social>
-        <a href="facebook"> <FaFacebookSquare size={20} /> </a>
-        <a href="facebook"> <FaInstagram size={20} /> </a>
-        <a href="facebook"> <FaLinkedinIn size={20} /> </a>
-        <a href="facebook"> <FaTwitterSquare size={20} /> </a>
-      </Social>
-    </TopHeader> */}
- 
+  <Container BG={bg}> 
     <Navagation>
       <div>
         <h1>Restaurante Chiza</h1>

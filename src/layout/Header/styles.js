@@ -10,71 +10,7 @@ export const Container = styled.header`
   min-height: 650px;
   width: 100%; 
   color: #fff;
-`;
-
-
-export const TopHeader = styled.div`
-  background: ${yellow_color};
-  height: 25px;
-  width: 100%;
-  color: ${light_gray}; 
-  font-size: 1.2em;
-  padding: .2em 2rem;  
-
-  display: flex; 
-  align-content: center;
-  justify-content: space-between; 
-
-  svg {
-    transform: scale(.7);
-    margin-right: .5rem;
-  }  
-`;
-
-export const Info = styled.div`
-  display: flex; 
-  justify-content: space-between;
-  padding: 0 2rem; 
-  ${SmoothTransition};
-
-  * {
-    ${SmoothTransition};
-  } 
-
-  > div {
-    display: flex;
-    overflow: hidden;
-    position: relative;  
-    margin-right: 1rem;   
-
-    svg {
-      transform: scale(1)
-    }
-
-    p {   
-      position: relative;
-      top: 2px;
-    }
-  }
-`;
-
-export const Social = styled.div`
-  display: flex; 
-  justify-content: space-between;
-
-  a:link, a:visited, a:hover {
-    color: #fff;
-  }
-
-  svg {
-    ${SmoothTransition};
-
-    &:hover {
-      transform: scale(1);
-      cursor: pointer;
-    }
-  }
-`;
+`; 
 
 export const Navagation = styled.nav`
   background: ${dark_brown};
