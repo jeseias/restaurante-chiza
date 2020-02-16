@@ -10,6 +10,7 @@ export const green_color = '#81AA74';
 export const yellow_color = '#e19530';
 export const dark_brown = '#1C1D0D';
 export const t_dark_blue = 'rgba(44, 63, 76, 0.808)';
+export const light_brown = '#835808';
 
 
 export const light_gold = '#EFE8D6';

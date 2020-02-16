@@ -6,7 +6,7 @@ import { Container, ClientCard } from './styles';
 
 export default () => 
   <Container>
-    <h1> Seje o nosso client </h1>
+    <h1 className="MainTitle"> Seje o nosso client </h1>
 
     <div>
       <ClientCard>

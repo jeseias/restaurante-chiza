@@ -1,29 +1,29 @@
 import styled from 'styled-components';
 
-import { red_color, light_gray, yellow_color, dark_brown } from './../../styles/variables';
+import { yellow_color, dark_brown, light_gold } from './../../styles/variables';
 import { PositionAbsoluteCenter, BackgroundImage } from './../../styles/mixins';
 import { SmoothTransition } from './../../styles/utils';
  
 export const Container = styled.header`
-  ${props => BackgroundImage(props.BG)};
+  ${props => BackgroundImage(props.BG)};  
   position: relative;
   min-height: 650px;
   width: 100%; 
-  color: #fff;
+  color: ${light_gold};
 `; 
 
 export const Navagation = styled.nav`
-  background: ${dark_brown};
-  color: #fff;
+  background: ${dark_brown}; 
   padding: 1rem 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 .5rem .5rem rgba(0,0,0, .4);
+    font-family: 'Dancing Script';
 
   h1 {
     font-size: 3rem;
-    font-family: 'Akronim';
+    letter-spacing: 4px;
   }
 
   ul { 
@@ -35,7 +35,9 @@ export const Navagation = styled.nav`
       text-decoration: none;
       color: #fff;
       margin-right: .5rem;
-      text-align: center; 
+      text-align: center;  
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
 
     .nav-bar {
@@ -49,13 +51,16 @@ export const HeaderContent = styled.div`
   border-radius: 2rem;
   width: 70%;
   height: 70%;
-  padding: 2rem; 
+  padding: 2rem;  
+  font-family: 'Dancing Script';
   
   h1 {
     text-align: center;
-    font-size: 4.5rem;  
-    color: #fff;
+    font-size: 5rem;   
     text-shadow: 0 0 .1rem #f4f4f4;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 0 .5rem #333;
   }
 
   > div {
@@ -70,10 +75,10 @@ export const HeaderContent = styled.div`
     height: 100%; 
 
     p {
-      font-size: 1.5rem;
+      font-size: 3rem;
       letter-spacing: 2px;
       font-weight: bold;
-      text-shadow: 0 0 .3rem #000; 
+      text-shadow: 0 0 .5rem #333; 
     }
 
     button {
@@ -85,7 +90,7 @@ export const HeaderContent = styled.div`
       border-radius: 3rem;
       background: ${yellow_color};
       box-shadow: 0 .5rem .6rem ${dark_brown};
-      ${SmoothTransition};
+      ${SmoothTransition}; 
 
       &:hover {
         cursor: pointer;
