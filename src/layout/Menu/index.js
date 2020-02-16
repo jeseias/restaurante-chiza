@@ -1,22 +1,21 @@
 import React from 'react';
 
-import f from './../../assets/images/food/f.jpg'; 
+import f from './../../assets/images/food/f.jpg';
 import f1 from './../../assets/images/food/f1.jpg';
 import f2 from './../../assets/images/food/f2.jpg';
 import f3 from './../../assets/images/food/f3.jpg';
 import f4 from './../../assets/images/food/f4.jpg';
 import f5 from './../../assets/images/food/f5.jpg';
 
-import { Title } from './../../styles/typografy';
 import { Container, Platebox } from './styles';
 
 export default () => 
   <Container>
-    <h1>As Delicias de Hoje</h1>
+    <h1 className="MainTitle">As Delicias de Hoje</h1>
     <div>
       <Platebox BG={f}>
         <div className="img" ></div>
-        <Title className="title">Arroz com Feijao</Title>
+        <div className="title SecondaryColor">Arroz com Feijao</div>
         <p className="description">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repudiandae architecto similique.
         </p>
@@ -25,7 +24,7 @@ export default () =>
       </Platebox>
       <Platebox BG={f1}>
         <div className="img" ></div>
-        <Title className="title">Arroz com Feijao</Title>
+        <div className="title SecondaryColor">Arroz com Feijao</div>
         <p className="description">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repudiandae architecto similique.
         </p>
@@ -34,7 +33,7 @@ export default () =>
       </Platebox>
       <Platebox BG={f2}>
         <div className="img" ></div>
-        <Title className="title">Arroz com Feijao</Title>
+        <div className="title SecondaryColor">Arroz com Feijao</div>
         <p className="description">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repudiandae architecto similique.
         </p>
@@ -43,7 +42,7 @@ export default () =>
       </Platebox>
       <Platebox BG={f3}>
         <div className="img" ></div>
-        <Title className="title">Arroz com Feijao</Title>
+        <div className="title SecondaryColor">Arroz com Feijao</div>
         <p className="description">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repudiandae architecto similique.
         </p>
@@ -52,7 +51,7 @@ export default () =>
       </Platebox>
       <Platebox BG={f4}>
         <div className="img" ></div>
-        <Title className="title">Arroz com Feijao</Title>
+        <div className="title SecondaryColor">Arroz com Feijao</div>
         <p className="description">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repudiandae architecto similique.
         </p>
@@ -61,7 +60,7 @@ export default () =>
       </Platebox>
       <Platebox BG={f5}>
         <div className="img" ></div>
-        <Title className="title">Arroz com Feijao</Title>
+        <div className="title SecondaryColor">Arroz com Feijao</div>
         <p className="description">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repudiandae architecto similique.
         </p>

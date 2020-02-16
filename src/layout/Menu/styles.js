@@ -40,7 +40,7 @@ export const Platebox = styled.div`
   }
 
   .title {
-    grid-area: title; 
+    grid-area: title;
   }
 
   .description {

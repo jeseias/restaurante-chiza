@@ -5,6 +5,8 @@ import DancingScript from './../fonts/DancingScript.ttf';
 import Pacifico from './../fonts/Pacifico.ttf';
 import Poppins from './../fonts/Poppins.ttf';
 
+import { light_gold, yellow_color, dark_brown } from './variables';
+
 export default  createGlobalStyle`
   @font-face {
     font-family: 'Akronim';
@@ -43,4 +45,30 @@ export default  createGlobalStyle`
   body, input, button {
     font-family: 'Poppins', monospace;
   } 
+
+  /* Typogrady */
+  .MainTitle {
+    margin: 3rem;
+    text-align: center;
+    color: ${light_gold};
+    font-size: 4rem;  
+    text-shadow: 0 0 .3rem #333;
+    font-family: 'Akronim';
+
+    &::after, &::before {
+      content: "";
+      display: block;
+      width: 6%;
+      height: 3px;
+      background: ${yellow_color};
+      margin: 0 auto;
+    }
+  }
+
+  .SecondaryColor {
+    font-weight: bold;
+    text-align: right;
+    color: ${dark_brown};
+    font-size: 2.8rem;
+  }
 `;
