@@ -1,6 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default  createGlobalStyle`
+
+  @import url('https://fonts.googleapis.com/css?family=Akronim|Dancing+Script|Parisienne&display=swap');
+
   *, *::after, *::before {
     margin: 0;
     padding: 0;
@@ -9,6 +12,7 @@ export default  createGlobalStyle`
 
   html {
     font-size: 12px;
+    font-family: 'Dancing Script';
   }
 
   html, body, #root {
@@ -16,6 +20,6 @@ export default  createGlobalStyle`
   }
 
   body, input, button {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Dancing Script', Arial, monospace ;
   }
 `;
