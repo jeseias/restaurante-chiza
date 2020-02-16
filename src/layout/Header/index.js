@@ -6,30 +6,30 @@ import bg from './../../assets/images/bg/bg0.jpg';
 import { MdEmail, MdPhone, MdLocationOn } from 'react-icons/md';
 import { FaFacebookSquare, FaInstagram, FaLinkedinIn, FaBars  } from 'react-icons/fa';
 
-import { Container, TopHeader, Navagation, HeaderContent } from './styles';
+import { Container, TopHeader, Navagation, HeaderContent, Info, Social } from './styles';
 
 export default () => 
-  <Container>
+  <Container BG={bg}>
     <TopHeader>
-      <div>
-        <span>
+      <Info>
+        <div>
           <MdEmail size={20} className='icon' />
-          <span>restaurantechiza@outlook.com</span>
-        </span>
-        <span>
+          <p>restaurantechiza@outlook.com</p>
+        </div>
+        <div>
           <MdPhone size={20} className='icon' />
-          <span>912516269/923516269</span>
-        </span>
-        <span>
+          <p>912516269/923516269</p>
+        </div>
+        <div>
           <MdLocationOn size={20} className='icon' />
-          <span>Entrada do Sequele</span>
-        </span>
-      </div>
-      <div>
-        <FaFacebookSquare size={20} />
-        <FaInstagram size={20} />
-        <FaLinkedinIn size={20} />
-      </div>
+          <p>Entrada do Sequele</p>
+        </div>
+      </Info>
+      <Social>
+        <a href=""> <FaFacebookSquare size={20} /> </a>
+        <a href=""> <FaInstagram size={20} /> </a>
+        <a href=""> <FaLinkedinIn size={20} /> </a>
+      </Social>
     </TopHeader>
  
     <Navagation>
