@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
-import { dark_color, light_gray, transparent_color } from './../../styles/variables';
+import { dark_color, light_gray, transparent_color, t_dark_blue } from './../../styles/variables';
 import { PositionAbsoluteCenter, BackgroundImage } from './../../styles/mixins';
+import { SmoothTransition } from './../../styles/utils';
  
 export const Container = styled.header`
   ${props => BackgroundImage(props.BG)};
@@ -11,25 +12,76 @@ export const Container = styled.header`
   color: #fff;
 `;
 
+
 export const TopHeader = styled.div`
-  background: ${dark_color};
+  background: #e19530;
   height: 25px;
   width: 100%;
   color: ${light_gray}; 
   font-size: 1.2em;
-  z-index: 10;  
+  padding: .2em 2rem;  
 
-  display: flex;
-  justify-content: space-around;
+  display: flex; 
+  justify-content: space-between; 
+
+  svg {
+    transform: scale(.7);
+    margin-right: .5rem;
+  }
 `;
 
+export const Info = styled.div`
+  display: flex; 
+  justify-content: space-between;
+  padding: 0 2rem; 
+  ${SmoothTransition};
+
+  * {
+    ${SmoothTransition};
+  } 
+
+  > div {
+    display: flex;
+    overflow: hidden;
+    position: relative;  
+    margin-right: 1rem; 
+
+    p { 
+      position: relative;
+      top: 2px;     
+    } 
+
+    svg {
+      transform: scale(1)
+    }
+  }
+`;
+
+export const Social = styled.div`
+  display: flex; 
+  justify-content: space-between;
+
+  a:link, a:visited, a:hover {
+    color: #fff;
+  }
+
+  svg {
+    ${SmoothTransition};
+
+    &:hover {
+      transform: scale(1);
+      cursor: pointer;
+    }
+  }
+`;
 export const Navagation = styled.nav`
-  background: ${transparent_color};
+  background: ${dark_color};
+  color: #fff;
   padding: 2rem 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 0 .4rem rgba(0,0,0, .9);
+  box-shadow: 0 .5rem .5rem rgba(0,0,0, .4);
 
   ul { 
     margin: 0;
