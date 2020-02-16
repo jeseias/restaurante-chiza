@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-import { red_color, light_gray, yellow_color, dark_brown } from './../../styles/variables';
+import { light_gray, yellow_color, dark_brown } from './../../styles/variables';
 import { PositionAbsoluteCenter, BackgroundImage } from './../../styles/mixins';
 import { SmoothTransition } from './../../styles/utils';
  
 export const Container = styled.header`
-  ${props => BackgroundImage(props.BG)};
+  ${props => BackgroundImage(props.BG)};  
   position: relative;
   min-height: 650px;
   width: 100%; 
@@ -22,12 +22,13 @@ export const TopHeader = styled.div`
   padding: .2em 2rem;  
 
   display: flex; 
+  align-content: center;
   justify-content: space-between; 
 
   svg {
     transform: scale(.7);
     margin-right: .5rem;
-  } 
+  }  
 `;
 
 export const Info = styled.div`
@@ -44,15 +45,15 @@ export const Info = styled.div`
     display: flex;
     overflow: hidden;
     position: relative;  
-    margin-right: 1rem; 
-
-    p { 
-      position: relative;
-      top: 2px;     
-    } 
+    margin-right: 1rem;   
 
     svg {
       transform: scale(1)
+    }
+
+    p {   
+      position: relative;
+      top: 2px;
     }
   }
 `;
@@ -83,10 +84,11 @@ export const Navagation = styled.nav`
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 .5rem .5rem rgba(0,0,0, .4);
+    font-family: 'Dancing Script';
 
   h1 {
     font-size: 3rem;
-    font-family: 'Akronim';
+    letter-spacing: 4px;
   }
 
   ul { 
@@ -98,7 +100,9 @@ export const Navagation = styled.nav`
       text-decoration: none;
       color: #fff;
       margin-right: .5rem;
-      text-align: center; 
+      text-align: center;  
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
 
     .nav-bar {
@@ -116,9 +120,13 @@ export const HeaderContent = styled.div`
   
   h1 {
     text-align: center;
-    font-size: 4.5rem;  
+    font-size: 5rem;  
     color: #fff;
     text-shadow: 0 0 .1rem #f4f4f4;
+    font-family: 'Dancing Script';
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 0 .3rem #333;
   }
 
   > div {

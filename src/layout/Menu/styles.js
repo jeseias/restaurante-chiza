@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 
+import { dark_brown } from './../../styles/variables'; 
+
 export const Container = styled.section`
-  padding: 1rem 5rem;
+  padding: 2rem 5rem;
   position: relative;
+  background: ${dark_brown};
 
   > div {
     display: grid;
@@ -13,6 +16,10 @@ export const Container = styled.section`
   h1 {
     margin-bottom: 3rem;
     text-align: center;
+    color: #fff;
+    font-size: 3rem;
+    padding: 1rem; 
+    font-family: 'Akronim';
   }
 `;
 

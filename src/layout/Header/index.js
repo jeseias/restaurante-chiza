@@ -10,7 +10,7 @@ import { Container, TopHeader, Navagation, HeaderContent, Info, Social } from '.
 
 export default () => 
   <Container BG={bg}>
-    <TopHeader>
+    {/* <TopHeader>
       <Info>
         <div>
           <MdEmail size={20} className='icon' />
@@ -31,7 +31,7 @@ export default () =>
         <a href="facebook"> <FaLinkedinIn size={20} /> </a>
         <a href="facebook"> <FaTwitterSquare size={20} /> </a>
       </Social>
-    </TopHeader>
+    </TopHeader> */}
  
     <Navagation>
       <div>
