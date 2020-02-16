@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import bg from './../../assets/images/bg/bg1.jpg';
+import bg from './../../assets/images/bg/bg.jpg';
 
 import { MdEmail, MdPhone, MdLocationOn } from 'react-icons/md';
 import { FaFacebookSquare, FaInstagram, FaLinkedinIn, FaBars, FaTwitterSquare  } from 'react-icons/fa';
@@ -26,9 +26,10 @@ export default () =>
         </div>
       </Info>
       <Social>
-        <a href=""> <FaFacebookSquare size={20} /> </a>
-        <a href=""> <FaInstagram size={20} /> </a>
-        <a href=""> <FaLinkedinIn size={20} /> </a>
+        <a href="facebook"> <FaFacebookSquare size={20} /> </a>
+        <a href="facebook"> <FaInstagram size={20} /> </a>
+        <a href="facebook"> <FaLinkedinIn size={20} /> </a>
+        <a href="facebook"> <FaTwitterSquare size={20} /> </a>
       </Social>
     </TopHeader>
  
