@@ -14,8 +14,8 @@ export default () =>
   <Container>
     <h1>As Delicias de Hoje</h1>
     <div>
-      <Platebox>
-        <div className="img" BG={bg}></div>
+      <Platebox BG={f}>
+        <div className="img" ></div>
         <div className="title">Arroz com Feijao</div>
         <p className="description">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repudiandae architecto similique.
@@ -23,8 +23,8 @@ export default () =>
         <p className="price">1200 AKZ</p>
         <button className="btn">Encomdar</button>
       </Platebox>
-      <Platebox>
-        <div className="img" BG={f1}></div>
+      <Platebox BG={f1}>
+        <div className="img" ></div>
         <div className="title">Arroz com Feijao</div>
         <p className="description">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repudiandae architecto similique.
@@ -32,8 +32,8 @@ export default () =>
         <p className="price">1200 AKZ</p>
         <button className="btn">Encomdar</button>
       </Platebox>
-      <Platebox>
-        <div className="img" BG={f2}></div>
+      <Platebox BG={f2}>
+        <div className="img" ></div>
         <div className="title">Arroz com Feijao</div>
         <p className="description">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repudiandae architecto similique.
@@ -41,8 +41,8 @@ export default () =>
         <p className="price">1200 AKZ</p>
         <button className="btn">Encomdar</button>
       </Platebox>
-      <Platebox>
-        <div className="img" BG={f3}></div>
+      <Platebox BG={f3}>
+        <div className="img" ></div>
         <div className="title">Arroz com Feijao</div>
         <p className="description">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repudiandae architecto similique.
@@ -50,8 +50,8 @@ export default () =>
         <p className="price">1200 AKZ</p>
         <button className="btn">Encomdar</button>
       </Platebox>
-      <Platebox>
-        <div className="img" BG={f4}></div>
+      <Platebox BG={f4}>
+        <div className="img" ></div>
         <div className="title">Arroz com Feijao</div>
         <p className="description">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repudiandae architecto similique.
@@ -59,8 +59,8 @@ export default () =>
         <p className="price">1200 AKZ</p>
         <button className="btn">Encomdar</button>
       </Platebox>
-      <Platebox>
-        <div className="img" BG={f5}></div>
+      <Platebox BG={f5}>
+        <div className="img" ></div>
         <div className="title">Arroz com Feijao</div>
         <p className="description">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repudiandae architecto similique.

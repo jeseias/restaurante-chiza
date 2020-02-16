@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { yellow_color, dark_brown } from './../../styles/variables';
+import { yellow_color, dark_brown, light_gold } from './../../styles/variables';
 import { PositionAbsoluteCenter, BackgroundImage } from './../../styles/mixins';
 import { SmoothTransition } from './../../styles/utils';
  
@@ -9,12 +9,11 @@ export const Container = styled.header`
   position: relative;
   min-height: 650px;
   width: 100%; 
-  color: #fff;
+  color: ${light_gold};
 `; 
 
 export const Navagation = styled.nav`
-  background: ${dark_brown};
-  color: #fff;
+  background: ${dark_brown}; 
   padding: 1rem 5rem;
   display: flex;
   justify-content: space-between;
@@ -57,8 +56,7 @@ export const HeaderContent = styled.div`
   
   h1 {
     text-align: center;
-    font-size: 5rem;  
-    color: #fff;
+    font-size: 5rem;   
     text-shadow: 0 0 .1rem #f4f4f4;
     font-weight: bold;
     text-transform: uppercase;
