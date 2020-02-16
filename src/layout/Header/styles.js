@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { dark_color, light_gray, transparent_color, t_dark_blue } from './../../styles/variables';
+import { red_color, light_gray, yellow_color, dark_brown } from './../../styles/variables';
 import { PositionAbsoluteCenter, BackgroundImage } from './../../styles/mixins';
 import { SmoothTransition } from './../../styles/utils';
  
@@ -14,7 +14,7 @@ export const Container = styled.header`
 
 
 export const TopHeader = styled.div`
-  background: #e19530;
+  background: ${yellow_color};
   height: 25px;
   width: 100%;
   color: ${light_gray}; 
@@ -27,7 +27,7 @@ export const TopHeader = styled.div`
   svg {
     transform: scale(.7);
     margin-right: .5rem;
-  }
+  } 
 `;
 
 export const Info = styled.div`
@@ -74,14 +74,20 @@ export const Social = styled.div`
     }
   }
 `;
+
 export const Navagation = styled.nav`
-  background: ${dark_color};
+  background: ${dark_brown};
   color: #fff;
-  padding: 2rem 5rem;
+  padding: 1rem 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 .5rem .5rem rgba(0,0,0, .4);
+
+  h1 {
+    font-size: 3rem;
+    font-family: 'Akronim';
+  }
 
   ul { 
     margin: 0;
@@ -91,8 +97,8 @@ export const Navagation = styled.nav`
       padding: 1rem; 
       text-decoration: none;
       color: #fff;
-      margin-right: 1rem;
-      text-align: center;
+      margin-right: .5rem;
+      text-align: center; 
     }
 
     .nav-bar {
@@ -102,8 +108,7 @@ export const Navagation = styled.nav`
 `;
 
 export const HeaderContent = styled.div`
-  ${PositionAbsoluteCenter(55,50)};
-  background: linear-gradient( 290deg  , #0012, rgba(0,0,0, .4));
+  ${PositionAbsoluteCenter(55,50)};   
   border-radius: 2rem;
   width: 70%;
   height: 70%;
@@ -111,6 +116,9 @@ export const HeaderContent = styled.div`
   
   h1 {
     text-align: center;
+    font-size: 4.5rem;  
+    color: #fff;
+    text-shadow: 0 0 .1rem #f4f4f4;
   }
 
   > div {
@@ -123,5 +131,29 @@ export const HeaderContent = styled.div`
     align-items: center;
     align-content: center; 
     height: 100%; 
+
+    p {
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+      font-weight: bold;
+      text-shadow: 0 0 .3rem #000; 
+    }
+
+    button {
+      border: none;
+      color: #fff;
+      padding: 1rem 2rem;
+      text-align: center;
+      font-size: 2rem;
+      border-radius: 3rem;
+      background: ${yellow_color};
+      box-shadow: 0 .5rem .6rem ${dark_brown};
+      ${SmoothTransition};
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+      }
+    }
   }
 `;

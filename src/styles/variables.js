@@ -7,11 +7,13 @@ export const transparent_color = '#0012';
 export const dark_color_1 = '#272A2B'
 export const green_color = '#81AA74';
 
+export const yellow_color = '#e19530';
+export const dark_brown = '#1C1D0D';
+export const t_dark_blue = 'rgba(44, 63, 76, 0.808)';
+
 
 export const light_gold = '#EFE8D6';
 export const dark_color = '#232323'
 export const dark_blue = '#2C3F4C';
 export const blue_color = '#248bcc';
 export const red_color_2 = '#ca3435';
-
-export const t_dark_blue = 'rgba(44, 63, 76, 0.808)';
