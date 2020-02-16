@@ -12,25 +12,7 @@ export const Container = styled.section`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1rem;
-  }
-
-  h1 {
-    margin: 3rem;
-    text-align: center;
-    color: ${light_gold};
-    font-size: 4rem;  
-    text-shadow: 0 0 .3rem #333;
-    font-family: 'Akronim';
-
-    &::after, &::before {
-      content: "";
-      display: block;
-      width: 6%;
-      height: 3px;
-      background: ${yellow_color};
-      margin: 0 auto;
-    } 
-  }
+  } 
 `;
 
 export const Platebox = styled.div`
@@ -58,11 +40,7 @@ export const Platebox = styled.div`
   }
 
   .title {
-    grid-area: title;
-    font-weight: bold;
-    text-align: right;
-    color: ${dark_brown};
-    font-size: 2.8rem;
+    grid-area: title; 
   }
 
   .description {

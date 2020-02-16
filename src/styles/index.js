@@ -42,5 +42,5 @@ export default  createGlobalStyle`
 
   body, input, button {
     font-family: 'Poppins', monospace;
-  }
+  } 
 `;
