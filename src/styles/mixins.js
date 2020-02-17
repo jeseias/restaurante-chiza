@@ -10,3 +10,11 @@ export const BackgroundImage = img => `
   background-size: cover;
   background-position: center;
 `;
+
+export const BackgroundImageBlend = (img, color, color1) => `
+  background-image: linear-gradient(45deg, ${color}, ${color1}), url(${img});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; 
+  background-blend-mode: soft-light;
+`;
