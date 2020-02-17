@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-import { light_brown, yellow_color, light_gold, light, dark_brown } from './../../styles/variables';
+import { light_brown, yellow_color, light_gold, dark_brown } from './../../styles/variables';
 import { BackgroundImage } from './../../styles/mixins';
 
 export const Container = styled.section`
-  padding: 1rem 18rem;
+  padding: 1rem 18rem 5rem 18rem;
   position: relative;
   text-align: center;
   background: ${light_gold};
@@ -30,6 +30,7 @@ export const ClientCard = styled.div`
   box-shadow: 0 0 .2rem ${dark_brown};
   border-radius: 2rem;
   background: #fff;
+  overflow: hidden;
 
   .img {
     ${props => BackgroundImage(props.BG)};

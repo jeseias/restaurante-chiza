@@ -14,7 +14,7 @@ export const light_brown = '#835808';
 
 
 export const light_gold = '#EFE8D6';
-export const dark_color = '#232323'
+export const dark_color = '#232323';
 export const dark_blue = '#2C3F4C';
 export const blue_color = '#248bcc';
 export const red_color_2 = '#ca3435';
