@@ -2,12 +2,15 @@ import React from 'react';
 
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
 
+import SeaVideo from './../../assets/videos/res.mp4';
+
 import { Container, TestimonalSlider, SlideItem } from './styles';
 
 export default () => {   
 
-  return (
-    <Container id="testemunhos">
+  return ( 
+    <Container id="testemunhos" BG={SeaVideo}> 
+      <video width="100%" height="100%" src={SeaVideo} /> 
       <h1>O que nossos clientes dizem</h1>
       <TestimonalSlider>
         <div className="left"><MdKeyboardArrowLeft size={30} /></div>

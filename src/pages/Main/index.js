@@ -5,8 +5,8 @@ import Menu from './../../layout/Menu';
 import Clientes from './../../layout/Clientes';
 import Planos from './../../layout/Planos';
 import Testemunhos from './../../layout/Testemunhos';
-import Sobre from './../../layout/Sobre';
-import Footer from './../../layout/Footer';
+import Sobre from './../../layout/Sobre'; 
+import Footer from './../../layout/Footer'; 
 
 export default () => {
   return (
@@ -16,8 +16,8 @@ export default () => {
       <Clientes />
       <Planos />
       <Testemunhos />
-      <Sobre />
-      <Footer />
+      <Sobre /> 
+      <Footer /> 
     </>
   )
 }

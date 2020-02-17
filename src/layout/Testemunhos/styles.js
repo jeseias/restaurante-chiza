@@ -1,9 +1,22 @@
 import styled from 'styled-components';
 
+import { BackgroundImage } from './../../styles/mixins';
+
 export const Container = styled.div`
   padding: 1rem 5rem;
   position: relative;
   text-align: center;
+  position: relative;
+  ${props => BackgroundImage(props.BG)};
+
+  video {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
 `;
 
 export const TestimonalSlider = styled.div`
