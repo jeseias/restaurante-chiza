@@ -4,7 +4,7 @@ import { light_brown, yellow_color, light_gold, dark_brown } from './../../style
 import { BackgroundImage } from './../../styles/mixins';
 
 export const Container = styled.section`
-  padding: 1rem 18rem;
+  padding: 1rem 18rem 5rem 18rem;
   position: relative;
   text-align: center;
   background: ${light_gold};

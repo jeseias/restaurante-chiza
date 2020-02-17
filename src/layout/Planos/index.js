@@ -4,7 +4,7 @@ import { Container, PlanoCard } from './styles';
 
 export default () => 
   <Container>
-    <h1> Super Planos </h1>
+    <h1 className="MainTitle"> Super Planos </h1>
     
     <div>
       <PlanoCard>
