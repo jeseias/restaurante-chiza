@@ -30,6 +30,7 @@ export const ClientCard = styled.div`
   box-shadow: 0 0 .2rem ${dark_brown};
   border-radius: 2rem;
   background: #fff;
+  overflow: hidden;
 
   .img {
     ${props => BackgroundImage(props.BG)};
