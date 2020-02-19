@@ -88,14 +88,15 @@ export const Navagation = styled.nav`
     }
 
     .nav-bar {
-      display: block;
       ${PositionAbsoluteCenter(47, 92)};
+      ${SmoothTransition};
+      display: block;
       z-index: 120;
-    }
 
-    &.active {
-      display: none;
-    }
+      &.active {
+        color: ${dark_brown};
+      }
+    } 
 
     ul {
       box-shadow: 0 0 1rem ${dark_brown};
@@ -106,9 +107,13 @@ export const Navagation = styled.nav`
       display: block;
       height: 100vh; 
       z-index: 100;
-      right: 100px;
+      right: -100%;
       width: 50vw;
       top: 0;
+
+      &.active {
+        right: 0;
+      }
 
       a, a:active, a:link, a:visited  {
         display: block;
@@ -123,8 +128,35 @@ export const Navagation = styled.nav`
         font-weight: bold;
         font-size: 1.3rem;
       }
+
+    }
+
+    &.active {
+      
+      ul {
+        right: 0;
+      }
+    }
+
+  }
+
+  @media ${device.mobileL} { 
+
+    h1 {
+      padding: 1rem; 
+      font-size: 2.2rem;  
+    }
+
+    .nav-bar {
+      ${PositionAbsoluteCenter(27, 86)};
+      transform: scale(.8);
+    }
+
+    ul {
+      width: 80vw;
     }
   }
+
 `;
 
 export const HeaderContent = styled.div`

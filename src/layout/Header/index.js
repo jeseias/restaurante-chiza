@@ -8,27 +8,41 @@ import { FaBars   } from 'react-icons/fa';
 import { Container, Navagation, HeaderContent } from './styles';
 
 export default () => {
-  const [nav, setNav] = useState(false);
+  const [nav, setNav] = useState(false); 
 
-  function showMenu() {
-    setNav(!true);
+  const hideNav = () => {
+    console.log('James Bond')
+    setNav(false);
   }
 
-  useEffect(() => {
-    console.log(document.querySelector('#header'))
+  useEffect(() => { 
     nav ? 
-      document.querySelector('#header').classList.add('active') : 
-      document.querySelector('#header').classList.remove('active') 
+      document.querySelector('#header ul').classList.add('active') : 
+      document.querySelector('#header ul').classList.remove('active') 
+
+    nav ? 
+      document.querySelector('#header .nav-bar').classList.add('active') : 
+      document.querySelector('#header .nav-bar').classList.remove('active') 
   }, [nav]);
 
+  function navLinks(e) {
+    e.target !== <a></a> ? setNav(false) : setNav(true)
+  }
+
   return (
-    <Container BG={bg} visible={nav} id="header"> 
+    <Container 
+      onClick={() => nav ? hideNav() : ''} 
+      onScroll={() => nav ? hideNav() : ''} 
+      visible={nav} 
+      id="header" 
+      BG={bg} 
+    > 
       <Navagation>
         <div>
           <h1>Restaurante Chiza</h1>
           <FaBars size={30} className="nav-bar" onClick={() => setNav(!nav)} />
         </div>
-        <ul>
+        <ul onClick={e => navLinks(e)}>
           <Link to='/#Menu'>Menu</Link>
           <Link to='/#Clientes'>Clientes</Link>
           <Link to='/#Planos'>Planos</Link>
