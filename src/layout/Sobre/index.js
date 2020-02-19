@@ -17,7 +17,7 @@ export default () => {
   return (
     <Container>
       <SobreBox>
-        <h1>Restaurante Chiza</h1>
+        <h1 className="MainTitle">Restaurante Chiza</h1>
         <br/>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, perspiciatis totam quod eum vero nulla velit.

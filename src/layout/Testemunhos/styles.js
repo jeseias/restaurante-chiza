@@ -50,6 +50,7 @@ export const ClientBox = styled.div`
     border-radius: 1rem;
     box-shadow: 0 0 2rem rgba(0,0,0, .9);  
     background: ${light_gold};
+    background: #fff;
 
     .img {
       ${props =>  BackgroundImage(props.bg)};

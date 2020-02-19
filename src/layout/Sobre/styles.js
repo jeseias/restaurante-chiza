@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { dark_brown, light_gold } from './../../styles/variables';
+import { dark_brown, light_gold, yellow_color } from './../../styles/variables';
 import { BackgroundImage } from './../../styles/mixins';
 import { SmoothTransition } from './../../styles/utils';
 
@@ -8,21 +8,20 @@ export const Container = styled.section`
   padding: 1rem 5rem;
   display: grid;
   grid-template-columns: 40% 60%;
-  background: ${dark_brown};
+  background: ${light_gold};
 `;
 
 export const SobreBox = styled.div`
   padding: 5rem;
 
   h1 {
-    color: ${light_gold};
+    color: ${dark_brown};
     font-size: 4rem;
-    text-align: center;
-    font-family: 'Akronim'
+    text-align: center; 
   }
 
   p {
-    color: #fff;
+    color: ${dark_brown};
     font-size: 1.5rem;
     font-family: 'Dancing Script';
     letter-spacing: 2px;
