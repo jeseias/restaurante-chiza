@@ -7,8 +7,7 @@ import { device  } from './../../styles/device';
  
 export const Container = styled.header`
   ${props => BackgroundImage(props.BG)};  
-  position: relative; 
-  padding-bottom: 5rem;
+  position: relative;  
   width: 100%;
   min-width: 100vw;  
 `; 
@@ -30,7 +29,7 @@ export const Navagation = styled.nav`
   h1 {
     font-size: 3rem;
     letter-spacing: 4px;
-    margin-right: 8rem;
+    margin-right: 28rem;
   }
 
   .nav-bar {
@@ -160,20 +159,21 @@ export const Navagation = styled.nav`
 `;
 
 export const HeaderContent = styled.div`
-  display: block;
-  margin: 4rem auto 0;   
-  border-radius: 2rem;
-  width: 70%;
-  height: 70%;
-  padding: 2rem;  
-  font-family: 'Dancing Script'; 
+  display: block;    
+  width: 100%;
+  height: 100%;
+  padding: 9rem 2rem;  
+  font-family: 'Dancing Script';  
+  background: rgba(0,0,0, .4);
   
   h1 {
     text-align: center;
-    font-size: 5rem;    
+    font-size: 5rem;     
     font-weight: bold;
     text-transform: uppercase;
-    text-shadow: 0 0 .5rem #333;
+    text-shadow: 0 0 1rem #333;
+    color: #fff;
+    margin-bottom: 2rem;
   }
 
   > div {
@@ -182,16 +182,17 @@ export const HeaderContent = styled.div`
 
   div div {
     display: flex;
-    justify-content: space-evenly; 
+    justify-content: center; 
     align-items: center;
     align-content: center; 
     height: 100%; 
 
     p {
-      font-size: 3rem;
-      letter-spacing: 2px;
+      font-size: 3rem; 
       font-weight: bold;
-      text-shadow: 0 0 .5rem #333; 
+      text-shadow: 0 0 1rem #333;
+      color: #fff; 
+      margin-right: 5rem;
     }
 
     button {
@@ -210,5 +211,56 @@ export const HeaderContent = styled.div`
         transform: scale(1.05);
       }
     }
+  }
+
+  /* MQ */
+
+  @media ${device.laptop} { 
+    padding: 6rem 2rem;  
+  }
+
+  @media ${device.tablet} { 
+    padding: 5rem 2rem; 
+
+    h1 {
+      font-size: 3.5rem;
+    } 
+
+    div div { 
+
+      p {
+        font-size: 1.8rem;
+        text-align: center;
+      }
+
+      button {
+        border: none;
+        color: #fff;
+        padding: .5rem 1rem;
+        text-align: center;
+        font-size: 1.5rem;
+      }
+
+    }
+
+    @media ${device.mobileL} { 
+      h1 {
+        font-size: 2.8rem;
+      }
+
+      div div {
+        display: block;
+
+        p {
+          width: 100%;
+        }
+
+        button {
+          display: block;
+          margin: 2rem auto 0 auto;
+        }
+      }
+    }
+
   }
 `;
