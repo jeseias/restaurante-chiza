@@ -18,3 +18,9 @@ export const BackgroundImageBlend = (img, color, color1) => `
   background-position: center; 
   background-blend-mode: soft-light;
 `;
+
+export const MoveElement = (t,l) => `
+  position: relative;
+  top: ${t}px;
+  left: ${l}px;
+`;

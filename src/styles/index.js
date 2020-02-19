@@ -32,6 +32,7 @@ export default  createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
   }
 
   html {
@@ -45,6 +46,10 @@ export default  createGlobalStyle`
   body, input, button {
     font-family: 'Poppins', monospace;
   } 
+
+  #header, #menu, #clientes, #menu, #planos, #testemunhos, #sobre, #footer {
+    min-width: 100vw;
+  }
 
   /* Typogrady */
   .MainTitle {

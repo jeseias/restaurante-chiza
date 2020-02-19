@@ -1,34 +1,48 @@
 import styled from 'styled-components';
 
 import { yellow_color, dark_brown, light_gold } from './../../styles/variables';
-import { PositionAbsoluteCenter, BackgroundImage } from './../../styles/mixins';
-import { SmoothTransition } from './../../styles/utils';
+import { BackgroundImage, MoveElement, PositionAbsoluteCenter } from './../../styles/mixins';
+import { SmoothTransition, CenterContent } from './../../styles/utils';
+import { device  } from './../../styles/device';
  
 export const Container = styled.header`
   ${props => BackgroundImage(props.BG)};  
-  position: relative;
-  min-height: 650px;
-  width: 100%; 
-  color: ${light_gold};
+  position: relative; 
+  padding-bottom: 5rem;
+  width: 100%;
+  min-width: 100vw;  
 `; 
 
 export const Navagation = styled.nav`
   background: ${dark_brown}; 
-  padding: 1rem 5rem;
+  padding: 1.4rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  justify-items: center;
   align-items: center;
+  align-content: center;
   box-shadow: 0 .5rem .5rem rgba(0,0,0, .4);
-    font-family: 'Dancing Script';
+  font-family: 'Dancing Script';
+  color: #fff; 
+  margin: 0 auto; 
+  min-width: 100vw;
 
   h1 {
     font-size: 3rem;
     letter-spacing: 4px;
+    margin-right: 8rem;
+  }
+
+  .nav-bar {
+    display: none; 
   }
 
   ul { 
+    display: block;
     margin: 0;
     list-style: none;
+    height: 100%;  
+    ${CenterContent};
     
     a, a:active, a:link, a:visited {
       padding: 1rem; 
@@ -39,25 +53,92 @@ export const Navagation = styled.nav`
       text-transform: uppercase;
       letter-spacing: 2px;
     }
+  }
+
+  /* Media Querias */
+  @media ${device.laptop} {
+    justify-content: space-between;
+    padding: 1.4rem .4rem;
+
+    h1 {
+      margin: 0; 
+    } 
+
+    ul {
+      padding: 0;
+      ${MoveElement(5)}
+
+      a,  a:active, a:link, a:visited {
+        margin: 0;
+        padding: 0 1rem;
+        letter-spacing: 0; 
+      }
+    }
+  }
+
+  @media ${device.tablet} { 
+    position: relative;  
+    display: block;
+    padding: 0;
+
+    h1 {
+      padding: 1rem 4rem;
+      width: 100%;
+      border-bottom: 1px solid ${light_gold};
+    }
 
     .nav-bar {
-      display: none; 
+      display: block;
+      ${PositionAbsoluteCenter(47, 92)};
+      z-index: 120;
+    }
+
+    &.active {
+      display: none;
+    }
+
+    ul {
+      box-shadow: 0 0 1rem ${dark_brown};
+      padding: 7rem 2rem 2rem 2rem;
+      background: ${light_gold}; 
+      ${SmoothTransition};   
+      position: fixed;
+      display: block;
+      height: 100vh; 
+      z-index: 100;
+      right: 100px;
+      width: 50vw;
+      top: 0;
+
+      a, a:active, a:link, a:visited  {
+        display: block;
+        width: 100%; 
+        padding: 0;
+        letter-spacing: 2px; 
+        padding: 1rem 2rem;
+        margin-bottom: .4rem;
+        text-align: right;
+        z-index: 10;
+        color: ${dark_brown};
+        font-weight: bold;
+        font-size: 1.3rem;
+      }
     }
   }
 `;
 
 export const HeaderContent = styled.div`
-  ${PositionAbsoluteCenter(55,50)};   
+  display: block;
+  margin: 4rem auto 0;   
   border-radius: 2rem;
   width: 70%;
   height: 70%;
   padding: 2rem;  
-  font-family: 'Dancing Script';
+  font-family: 'Dancing Script'; 
   
   h1 {
     text-align: center;
-    font-size: 5rem;   
-    text-shadow: 0 0 .1rem #f4f4f4;
+    font-size: 5rem;    
     font-weight: bold;
     text-transform: uppercase;
     text-shadow: 0 0 .5rem #333;

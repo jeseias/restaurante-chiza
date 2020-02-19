@@ -11,13 +11,13 @@ import Footer from './../../layout/Footer';
 export default () => {
   return (
     <>
-      <Header />
-      <Menu />
-      <Clientes />
-      <Planos />
-      <Testemunhos />
-      <Sobre /> 
-      <Footer /> 
+      <Header id="header"/>
+      <Menu id="menu"/>
+      <Clientes id="clientes" />
+      <Planos id="planos" />
+      <Testemunhos id="testemunhos" />
+      <Sobre id="sobre" /> 
+      <Footer id="footer" /> 
     </>
   )
 }
