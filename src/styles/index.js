@@ -63,7 +63,7 @@ export default  createGlobalStyle`
     &::after, &::before {
       content: "";
       display: block;
-      width: 6%;
+      width: 10%;
       height: 3px;
       background: ${yellow_color};
       margin: 0 auto;

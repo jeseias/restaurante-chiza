@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import { dark_brown, yellow_color, light_gold } from './../../styles/variables'; 
 import { BackgroundImage } from './../../styles/mixins'; 
+import { device } from './../../styles/device'; 
 
 export const Container = styled.section`
   padding: 2rem 5rem;
@@ -11,15 +12,30 @@ export const Container = styled.section`
   > div {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1rem;
+    grid-gap: 1rem; 
   } 
+
+  @media ${device.laptop} {
+    padding: 2rem 1rem;
+  }
+
+  @media ${device.tablet} {
+    > div {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media ${device.mobileL} {
+    > div {
+      grid-template-columns: 1fr;
+    }
+  }
 `;
 
 export const Platebox = styled.div`
   border-radius: .5rem;
   display: grid;
-  grid-template-columns: 150px auto auto; 
-  grid-template-rows: 50px 40px 40px;
+  grid-template-columns: 150px auto auto;  
   grid-gap: 1rem;
   grid-template-areas: 
     "img title title"
@@ -29,6 +45,8 @@ export const Platebox = styled.div`
   background: ${light_gold};
   padding: 2rem;
   font-family: 'Dancing Script';
+  width: 100%;
+  height: auto;
 
   .img {
     display: block;
@@ -65,5 +83,79 @@ export const Platebox = styled.div`
     background: ${yellow_color};
     color: ${light_gold};
     border-radius: 3rem;
+  }
+
+  @media ${device.laptopL} {
+    grid-template-columns: 120px auto auto;
+    padding: 1rem;
+
+    .title {
+      font-size: 1.9rem;  
+    }
+
+    .price {
+      font-size: 1rem;
+      text-align: left;
+    }
+
+    .btn {
+      padding: .5rem 1rem;
+    }
+  }
+
+  @media ${device.laptop} {
+    grid-gap: 0;
+    grid-gap: .3rem;
+    grid-template-areas: 
+      "img title title"
+      "img description description"
+      "img price price"
+      "img btn btn";
+
+    .price {
+      text-align: right;
+    }
+
+    .btn {
+      margin-top: 1rem;
+      padding: .5rem .5rem;
+    }
+  }
+
+  @media ${device.tablet} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 150px 1fr 1fr 30px 30px;
+    grid-template-areas: 
+      "img img"
+      "title title "
+      "description description "
+      "price price "
+      "btn btn ";
+    text-align: center;
+
+    .img {
+      display: block; 
+      margin: 0 auto; 
+      width: 150px;
+    } 
+
+    .title {
+      text-align: center;
+    }
+
+    .description {
+      text-align: center;
+    }
+
+    .price {
+      text-align: center;
+    }
+
+    .btn {
+      margin-top: .5rem;
+      padding: .2rem 4rem;
+      text-align: center;
+    }
   }
 `;
