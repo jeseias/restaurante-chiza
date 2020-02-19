@@ -1,6 +1,6 @@
 import React  from 'react';
 
-import SeaVideo from './../../assets/videos/dark-sea.mp4';
+import SeaVideo from './../../assets/videos/res.mp4';
 import Me1 from './../../assets/images/testmunhos/me1.jpg';
 import Me2 from './../../assets/images/testmunhos/me2.jpg';
 import Me3 from './../../assets/images/testmunhos/me3.jpg';
