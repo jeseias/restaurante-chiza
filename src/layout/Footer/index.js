@@ -41,8 +41,8 @@ export default () =>
       </div>
     </Top>
     <Bottom>
-      <p>Feito com Amor por <a href="https://jeseiasdomingos.netlify.com" target="_blank">Jeseías Domingos</a> </p>
+      <p>Feito com Amor por <a href="https://jeseiasdomingos.netlify.com" rel="" target="_blank">Jeseías Domingos</a> </p>
       <br/>
-      <p> Copyright &copy; 2020, Restaurante Chiza, Todos Direito Reservados </p>
+      <p> Copyright &copy; 2020. Restaurante Chiza, Todos Direito Reservados </p>
     </Bottom>
   </Container>
