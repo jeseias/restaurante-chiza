@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import bg from './../../assets/images/bg/bg.jpg';
+import bg from './../../assets/images/bg/bg1.jpg';
  
 import { FaBars   } from 'react-icons/fa';
 
