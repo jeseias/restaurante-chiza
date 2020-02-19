@@ -1,61 +1,63 @@
-import React from 'react';
+import React  from 'react';
 
-import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
+import SeaVideo from './../../assets/videos/dark-sea.mp4';
+import Me1 from './../../assets/images/testmunhos/me1.jpg';
+import Me2 from './../../assets/images/testmunhos/me2.jpg';
+import Me3 from './../../assets/images/testmunhos/me3.jpg';
 
-import SeaVideo from './../../assets/videos/res.mp4';
+import {} from 'react-icons';
 
-import { Container, TestimonalSlider, SlideItem } from './styles';
+import { Container, TestimonialBox, ClientBox } from './styles';
 
-export default () => {   
+export default () => 
+  <Container id="testemunhos" BG={SeaVideo}> 
+    <video src={SeaVideo} autoPlay loop /> 
+    <h1 className="MainTitle">O que nossos clientes dizem</h1>
 
-  return ( 
-    <Container id="testemunhos" BG={SeaVideo}> 
-      <video width="100%" height="100%" src={SeaVideo} /> 
-      <h1>O que nossos clientes dizem</h1>
-      <TestimonalSlider>
-        <div className="left"><MdKeyboardArrowLeft size={30} /></div>
-        <div className="right"><MdKeyboardArrowRight size={30} /></div>
-        <div className="main">
-          <div>
-            <SlideItem>
-              <div>
-                <img src="" alt=""/>
-                <div>
-                  <p className="name">Zacarias Chitunda</p>
-                  <p className="saying">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit accusamus repellat amet.
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem illo voluptates quasi?
-                  </p>
-                </div>
-              </div>
-            </SlideItem>
-            <SlideItem>
-              <div>
-                <img src="" alt=""/>
-                <div>
-                  <p className="name">Zacarias Chitunda</p>
-                  <p className="saying">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit accusamus repellat amet.
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem illo voluptates quasi?
-                  </p>
-                </div>
-              </div>
-            </SlideItem>
-            <SlideItem>
-              <div>
-                <img src="" alt=""/>
-                <div>
-                  <p className="name">Zacarias Chitunda</p>
-                  <p className="saying">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit accusamus repellat amet.
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem illo voluptates quasi?
-                  </p>
-                </div>
-              </div>
-            </SlideItem>
-          </div>
+    <TestimonialBox>
+      <ClientBox bg={Me1}>
+        <div>
+          <div className="img" />
+          <p className="name">Jeseías Domingos</p>
+          <b>Guitarrista</b>
+          <h1>"</h1>
+          <p className="saying">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime nulla facilis repudiandae!
+          </p>
         </div>
-      </TestimonalSlider>
-    </Container>
-  )
-}
+      </ClientBox>
+      <ClientBox bg={Me3}>
+        <div>
+          <div className="img" />
+          <p className="name">Jeseías Domingos</p>
+          <b>Guitarrista</b>
+          <h1>"</h1>
+          <p className="saying">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime nulla facilis repudiandae!
+          </p>
+        </div>
+      </ClientBox>
+      <ClientBox bg={Me2}>
+        <div>
+          <div className="img" />
+          <p className="name">Jeseías Domingos</p>
+          <b>Guitarrista</b>
+          <h1>"</h1>
+          <p className="saying">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime nulla facilis repudiandae!
+          </p>
+        </div>
+      </ClientBox>
+      <ClientBox bg={Me3}>
+        <div>
+          <div className="img" />
+          <p className="name">Jeseías Domingos</p>
+          <b>Guitarrista</b>
+          <h1>"</h1>
+          <p className="saying">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime nulla facilis repudiandae!
+          </p>
+        </div>
+      </ClientBox>
+    </TestimonialBox>
+  </Container> 
