@@ -8,6 +8,9 @@ import Poppins from './../fonts/Poppins.ttf';
 import { dark_brown, light_gold, yellow_color } from './variables';
 
 export default  createGlobalStyle`
+
+  @import url('https://fonts.googleapis.com/css?family=Akronim|Dancing+Script:400,500,700|Pacifico&display=swap');
+  
   @font-face {
     font-family: 'Akronim';
     src: ${Akronim};
