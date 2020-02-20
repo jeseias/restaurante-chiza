@@ -3,12 +3,23 @@ import styled from 'styled-components';
 import { dark_brown, light_gold } from './../../styles/variables';
 import { BackgroundImage } from './../../styles/mixins';
 import { SmoothTransition } from './../../styles/utils';
+import { device } from './../../styles/device';
 
 export const Container = styled.section`
   padding: 1rem 5rem;
   display: grid;
   grid-template-columns: 40% 60%;
   background: ${light_gold};
+
+  /* MQ */
+  @media ${device.laptop} {
+    padding: 1rem;
+  }
+
+  @media ${device.tablet} {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
 `;
 
 export const SobreBox = styled.div`
@@ -32,12 +43,18 @@ export const SobreBox = styled.div`
       text-decoration: underline;
     }
   }
+
+  /* MQ */
+  @media ${device.laptop} {
+    padding: 0;
+  }
 `;
 
 export const Gallery = styled.div`
   padding: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 100px 100px 200px;
   grid-gap: 1rem; 
   grid-template-areas: 
     "one two three"
@@ -86,6 +103,12 @@ export const Gallery = styled.div`
 
   .eight {
     grid-area: eight;
+  }
+
+  /* MQ */
+  @media ${device.laptop} {
+    grid-gap: .5rem;
+    padding: 0;
   }
 `;
 
