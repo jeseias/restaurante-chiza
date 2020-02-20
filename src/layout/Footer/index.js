@@ -35,7 +35,6 @@ export default () =>
         <MdLocationOn size={30} className="mainIcon"/>
         <h2> Localização </h2>
         <p>
-          <MdLocationSearching size={17} />
           Entrada Do Sequele, Ao lado da ponte.
         </p>
       </div>

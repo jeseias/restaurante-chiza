@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import { yellow_color, dark_brown } from './../../styles/variables';
 import { CenterContent } from './../../styles/utils';
+import { device } from './../../styles/device';
 
 export const Container = styled.section`
   background: ${yellow_color};
@@ -57,6 +58,7 @@ export const Top = styled.div`
         position: relative;
         top: 1.2rem;
         ${CenterContent};
+        text-align: center;
       }
     }
 
@@ -72,12 +74,33 @@ export const Top = styled.div`
     }
 
   }
+
+  /* MQ */
+  @media ${device.laptop} {
+    width: 100%;
+    padding: 2rem 1rem;
+
+    > div {
+      width: 32%;
+      padding: 5rem 1rem 2rem 1rem; 
+    }
+  }
+
+  @media ${device.tablet} {
+    display: block;
+
+    > div {
+      margin: 1rem auto;
+      width: 80%;
+    }
+  }
+
 `;
 
 export const Bottom = styled.div` 
   color: #fff;
   background: ${dark_brown};
-  padding: 1rem 25rem;
+  padding: 1rem;
   text-align: center;
 
   a {

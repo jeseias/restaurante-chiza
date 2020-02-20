@@ -53,8 +53,7 @@ export const SobreBox = styled.div`
 export const Gallery = styled.div`
   padding: 1rem;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 100px 100px 100px 200px;
+  grid-template-columns: 1fr 1fr 1fr; 
   grid-gap: 1rem; 
   grid-template-areas: 
     "one two three"
@@ -109,6 +108,10 @@ export const Gallery = styled.div`
   @media ${device.laptop} {
     grid-gap: .5rem;
     padding: 0;
+  }
+
+  @media ${device.tablet} {
+    grid-template-rows: 100px 100px 100px 200px;
   }
 `;
 
