@@ -9,7 +9,7 @@ import f5 from './../../assets/images/food/f5.jpg';
 
 import { Container, Platebox } from './styles';
 
-export default () => 
+export default ({ encomendar }) => 
   <Container>
     <h1 className="MainTitle">As Delicias de Hoje</h1>
     <div>
@@ -20,7 +20,7 @@ export default () =>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repudiandae architecto similique.
         </p>
         <p className="price">1200 AKZ</p>
-        <button className="btn">Encomdar</button>
+        <button className="btn" onClick={() => encomendar()} >Encomdar</button> 
       </Platebox>
       <Platebox BG={f1}>
         <div className="img" ></div>
@@ -29,7 +29,7 @@ export default () =>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repudiandae architecto similique.
         </p>
         <p className="price">1200 AKZ</p>
-        <button className="btn">Encomdar</button>
+        <button className="btn" onClick={() => encomendar()} >Encomdar</button>
       </Platebox>
       <Platebox BG={f2}>
         <div className="img" ></div>
@@ -38,7 +38,7 @@ export default () =>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repudiandae architecto similique.
         </p>
         <p className="price">1200 AKZ</p>
-        <button className="btn">Encomdar</button>
+        <button className="btn" onClick={() => encomendar()} >Encomdar</button>
       </Platebox>
       <Platebox BG={f3}>
         <div className="img" ></div>
@@ -47,7 +47,7 @@ export default () =>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repudiandae architecto similique.
         </p>
         <p className="price">1200 AKZ</p>
-        <button className="btn">Encomdar</button>
+        <button className="btn" onClick={() => encomendar()} >Encomdar</button>
       </Platebox>
       <Platebox BG={f4}>
         <div className="img" ></div>
@@ -56,7 +56,7 @@ export default () =>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repudiandae architecto similique.
         </p>
         <p className="price">1200 AKZ</p>
-        <button className="btn">Encomdar</button>
+        <button className="btn" onClick={() => encomendar()} >Encomdar</button>
       </Platebox>
       <Platebox BG={f5}>
         <div className="img" ></div>
@@ -65,7 +65,7 @@ export default () =>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repudiandae architecto similique.
         </p>
         <p className="price">1200 AKZ</p>
-        <button className="btn">Encomdar</button>
+        <button className="btn" onClick={() => encomendar()} >Encomdar</button>
       </Platebox>
     </div>
   </Container>
