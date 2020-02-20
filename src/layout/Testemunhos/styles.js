@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { dark_brown, light_gold, yellow_color } from './../../styles/variables';
+import { dark_brown, light_gold } from './../../styles/variables';
 import { PositionAbsoluteCenter, BackgroundImage } from './../../styles/mixins';
 
 export const Container = styled.div`

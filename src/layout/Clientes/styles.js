@@ -2,9 +2,10 @@ import styled from 'styled-components';
 
 import { light_brown, yellow_color, light_gold, dark_brown } from './../../styles/variables';
 import { BackgroundImage } from './../../styles/mixins';
+import { device } from './../../styles/device';
 
 export const Container = styled.section`
-  padding: 1rem 18rem 5rem 18rem;
+  padding: 1rem 2rem;
   position: relative;
   text-align: center;
   background: ${light_gold};
@@ -13,6 +14,9 @@ export const Container = styled.section`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 2rem;
+    padding: 2rem;
+    margin: 0 auto;
+    width: 80%;
   }
 
   > h1 {
@@ -22,15 +26,40 @@ export const Container = styled.section`
       background: ${light_brown};
     }
   }
+
+  /* MQ */
+  @media ${device.laptop} {
+    padding: 2rem .5rem;
+
+    > div {
+      width: 100%;
+      grid-gap: 1rem;
+      padding: .5rem;
+    }
+  }
+
+  @media ${device.tablet} {
+    > div {
+      grid-template-columns: 1fr;
+      width: 80%;
+    }
+  }
+
+  @media ${device.mobileL} {
+    > div {
+      grid-template-columns: 1fr;
+      width: 90%;
+    }
+  }
 `;
 
 export const ClientCard = styled.div` 
   text-align: center; 
   height: 500px;  
-  box-shadow: 0 0 .2rem ${dark_brown};
   border-radius: 2rem;
   background: #fff;
   overflow: hidden;
+  padding-bottom: 2rem;
 
   .img {
     ${props => BackgroundImage(props.BG)};
@@ -58,9 +87,10 @@ export const ClientCard = styled.div`
     position: relative;
     top: -60px;
     text-transform: uppercase;
-    font-size: 3.6rem;
+    font-size: 2.4rem;
     color: ${light_gold};
     text-shadow: 0 0 .6rem ${dark_brown};
+    width: 100%;
   }
 
   p {
@@ -69,7 +99,7 @@ export const ClientCard = styled.div`
     top: -40px;
     font-weight: bold;
     font-family: 'Pacifico';
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     padding: .3rem;
   }
 
@@ -85,5 +115,10 @@ export const ClientCard = styled.div`
     border-radius: 3rem;
     font-family: 'Pacifico';
     box-shadow: 0 0 .3rem ${dark_brown};
-    }
+  }
+
+  @media ${device.tablet} {
+    padding-bottom: 0;
+  }
+
 `;

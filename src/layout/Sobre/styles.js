@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { dark_brown, light_gold, yellow_color } from './../../styles/variables';
+import { dark_brown, light_gold } from './../../styles/variables';
 import { BackgroundImage } from './../../styles/mixins';
 import { SmoothTransition } from './../../styles/utils';
 
