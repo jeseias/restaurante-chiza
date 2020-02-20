@@ -2,14 +2,15 @@ import styled from 'styled-components';
 
 import { dark_brown, light_gold } from './../../styles/variables';
 import { PositionAbsoluteCenter, BackgroundImage } from './../../styles/mixins';
+import { device } from './../../styles/device';
 
 export const Container = styled.div`
   padding: 1rem 5rem;
   position: relative;
   text-align: center;
   position: relative;  
-
-  video {
+  
+  video { 
     position: absolute;
     object-fit: cover;
     display: block;
@@ -17,16 +18,11 @@ export const Container = styled.div`
     width: 100%;
     z-index: -1;
     left: 0;
-    top: 0;
-    
-    &::after {
-      display: block;
-      content: "";
-      background: #D00;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
+    top: 0; 
+  }
+
+  @media ${device.laptop} {
+    padding: 1rem 2rem;
   }
 `;
 
@@ -36,14 +32,32 @@ export const TestimonialBox = styled.div`
   grid-gap: 2rem;
   margin: 6rem auto 4rem auto;
   width: 90%;  
+
+  /* MQ */
+  @media ${device.laptop} {
+    width: 100%;
+    grid-gap: 1rem;
+  }
+
+  @media ${device.tablet} {
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    grid-gap: 1rem; 
+  }
+
+  @media ${device.mobileL} {
+    grid-template-columns: 1fr;
+    width: 100%;
+    grid-gap: 1rem; 
+  }
 `; 
 
 export const ClientBox = styled.div`  
   border-radius: 2rem; 
   position: relative;
   z-index: 10;  
-    
-  > div {
+  
+  > div { 
     position: relative;
     padding: 1rem 2rem;
     padding-top: 140px;  
@@ -60,6 +74,7 @@ export const ClientBox = styled.div`
       display: block;
       height: 160px;
       width: 160px; 
+      z-index: 1000;
     }
 
     .name {
@@ -87,4 +102,9 @@ export const ClientBox = styled.div`
       font-family: 'Pacifico';
     }
   } 
+
+  /* MQ */
+  @media ${device.tablet} { 
+    margin-bottom: 1rem; 
+  }
 `;

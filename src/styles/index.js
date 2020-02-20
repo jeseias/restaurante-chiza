@@ -31,8 +31,7 @@ export default  createGlobalStyle`
   *, *::after, *::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    overflow-x: hidden;
+    box-sizing: border-box; 
   }
 
   html {
@@ -41,6 +40,7 @@ export default  createGlobalStyle`
 
   html, body, #root {
     min-height: 100%;
+    overflow-x: hidden;
   }
 
   body, input, button {
