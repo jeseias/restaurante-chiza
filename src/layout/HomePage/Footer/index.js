@@ -2,7 +2,7 @@ import React from 'react';
 
 import { FaFacebookSquare, FaInstagram, FaLinkedinIn, FaPlaneDeparture, 
   FaAddressBook, FaTwitterSquare  } from 'react-icons/fa';
-  import { MdEmail, MdPhone, MdLocationOn, MdLocationSearching } from 'react-icons/md';
+  import { MdEmail, MdPhone, MdLocationOn } from 'react-icons/md';
 
 import { Container, Top, Bottom } from './styles';
 

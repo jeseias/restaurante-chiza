@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Taxi from './../../assets/images/clientes/taxi.jpg';
-import Company from './../../assets/images/clientes/company.jpg';
-import Person from './../../assets/images/clientes/me3.jpg';
+import Taxi from './../../../assets/images/clientes/taxi.jpg';
+import Company from './../../../assets/images/clientes/company.jpg';
+import Person from './../../../assets/images/clientes/me3.jpg';
 
 import { Container, ClientCard } from './styles';
 

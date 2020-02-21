@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import bg from './../../assets/images/bg/bg1.jpg';
+import bg from './../../../assets/images/bg/bg1.jpg';
  
 import { FaBars   } from 'react-icons/fa';
 
@@ -26,7 +26,7 @@ export default ({ criarCliente }) => {
   }, [nav]);
 
   function navLinks(e) {
-    e.target !== <a></a> ? setNav(false) : setNav(true)
+    e.target !== <a href="#header">df</a> ? setNav(false) : setNav(true)
   }
 
   return (

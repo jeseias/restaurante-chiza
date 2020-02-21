@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import { dark_brown, yellow_color, light_gold } from './../../styles/variables'; 
-import { BackgroundImage } from './../../styles/mixins'; 
-import { device } from './../../styles/device'; 
+import { dark_brown, yellow_color, light_gold } from './../../../styles/variables'; 
+import { BackgroundImage } from './../../../styles/mixins'; 
+import { device } from './../../../styles/device'; 
 
 export const Container = styled.section`
   padding: 2rem 5rem;

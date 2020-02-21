@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import { dark_brown, light_gold } from './../../styles/variables';
-import { PositionAbsoluteCenter, BackgroundImage } from './../../styles/mixins';
-import { device } from './../../styles/device';
+import { dark_brown, light_gold } from './../../../styles/variables';
+import { PositionAbsoluteCenter, BackgroundImage } from './../../../styles/mixins';
+import { device } from './../../../styles/device';
 
 export const Container = styled.div`
   padding: 1rem 5rem;

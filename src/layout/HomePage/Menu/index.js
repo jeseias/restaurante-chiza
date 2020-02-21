@@ -1,11 +1,11 @@
 import React from 'react';
 
-import f from './../../assets/images/food/f.jpg'; 
-import f1 from './../../assets/images/food/f1.jpg';
-import f2 from './../../assets/images/food/f2.jpg';
-import f3 from './../../assets/images/food/f3.jpg';
-import f4 from './../../assets/images/food/f4.jpg';
-import f5 from './../../assets/images/food/f5.jpg';
+import f from './../../../assets/images/food/f.jpg'; 
+import f1 from './../../../assets/images/food/f1.jpg';
+import f2 from './../../../assets/images/food/f2.jpg';
+import f3 from './../../../assets/images/food/f3.jpg';
+import f4 from './../../../assets/images/food/f4.jpg';
+import f5 from './../../../assets/images/food/f5.jpg';
 
 import { Container, Platebox } from './styles';
 

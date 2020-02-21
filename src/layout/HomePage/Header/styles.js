@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-import { yellow_color, dark_brown, light_gold } from './../../styles/variables';
-import { BackgroundImage, MoveElement, PositionAbsoluteCenter } from './../../styles/mixins';
-import { SmoothTransition, CenterContent } from './../../styles/utils';
-import { device  } from './../../styles/device';
+import { yellow_color, dark_brown, light_gold } from './../../../styles/variables';
+import { BackgroundImage, MoveElement, PositionAbsoluteCenter } from './../../../styles/mixins';
+import { SmoothTransition, CenterContent } from './../../../styles/utils';
+import { device  } from './../../../styles/device';
  
 export const Container = styled.header`
   ${props => BackgroundImage(props.BG)};  

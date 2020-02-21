@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import { yellow_color, dark_brown } from './../../styles/variables';
-import { CenterContent } from './../../styles/utils';
-import { device } from './../../styles/device';
+import { yellow_color, dark_brown } from './../../../styles/variables';
+import { CenterContent } from './../../../styles/utils';
+import { device } from './../../../styles/device';
 
 export const Container = styled.section`
   background: ${yellow_color};

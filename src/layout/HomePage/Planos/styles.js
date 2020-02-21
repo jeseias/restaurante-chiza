@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import { yellow_color, dark_brown, light_gold  } from './../../styles/variables';
-import { device  } from './../../styles/device';
+import { yellow_color, dark_brown, light_gold  } from './../../../styles/variables';
+import { device  } from './../../../styles/device';
 
 export const Container = styled.section`
   padding: 1rem 5rem 3rem 5rem;

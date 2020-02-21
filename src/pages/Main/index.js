@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
-import Header from './../../layout/Header';
-import Menu from './../../layout/Menu';
-import Clientes from './../../layout/Clientes';
-import Planos from './../../layout/Planos';
-import Testemunhos from './../../layout/Testemunhos';
-import Sobre from './../../layout/Sobre'; 
-import Footer from './../../layout/Footer'; 
+import Header from './../../layout/HomePage/Header';
+import Menu from './../../layout/HomePage/Menu';
+import Clientes from './../../layout/HomePage/Clientes';
+import Planos from './../../layout/HomePage/Planos';
+import Testemunhos from './../../layout/HomePage/Testemunhos';
+import Sobre from './../../layout/HomePage/Sobre'; 
+import Footer from './../../layout/HomePage/Footer'; 
 
 import Modal from './../../components/Modal';
 
