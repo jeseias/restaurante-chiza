@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { yellow_color, red_color } from './../../styles/variables';
+import { yellow_color } from './../../styles/variables';
 import { SmoothTransition } from './../../styles/utils';
 
 export const Container = styled.div`
@@ -32,24 +32,6 @@ export const Container = styled.div`
     }
   }
 
-  .btn {
-    margin-bottom: .5rem;
-    border-radius: 1rem;
-    padding: 1rem 2rem;
-    text-align: center;
-    color: #fff;
-    width: 100%;
-    cursor: pointer;
-    outline: none;
-  }
-
-  .enviar {
-    background: ${yellow_color};
-  }
-
-  .cancel {
-    background: ${red_color};
-  }
 `;
 
 export const Encomendar = styled.div`

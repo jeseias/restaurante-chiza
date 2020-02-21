@@ -14,12 +14,10 @@ export const Container = styled.header`
 
 export const Navagation = styled.nav`
   background: ${dark_brown}; 
-  padding: 1.4rem;
+  padding: 1.2rem 2rem;
   display: flex;
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
-  align-content: center;
+  justify-content: space-around; 
+  align-items: center; 
   box-shadow: 0 .5rem .5rem rgba(0,0,0, .4);
   font-family: 'Dancing Script';
   color: #fff; 
@@ -27,9 +25,9 @@ export const Navagation = styled.nav`
   min-width: 100vw;
 
   h1 {
+    letter-spacing: 4px; 
+    ${MoveElement(2)};
     font-size: 3rem;
-    letter-spacing: 4px;
-    margin-right: 28rem;
   }
 
   .nav-bar {
@@ -44,13 +42,14 @@ export const Navagation = styled.nav`
     ${CenterContent};
     
     a, a:active, a:link, a:visited {
-      padding: 1rem; 
+      ${MoveElement(5)};
+      padding: .8rem; 
       text-decoration: none;
       color: #fff;
-      margin-right: .5rem;
+      margin-right: .3rem;
       text-align: center;  
       text-transform: uppercase;
-      letter-spacing: 2px;
+      letter-spacing: 1.5px;
     }
   }
 

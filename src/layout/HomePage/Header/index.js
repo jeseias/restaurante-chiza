@@ -5,6 +5,7 @@ import bg from './../../../assets/images/bg/bg1.jpg';
  
 import { FaBars   } from 'react-icons/fa';
 
+import { Button } from './../../../styles/components';
 import { Container, Navagation, HeaderContent } from './styles';
 
 export default ({ criarCliente }) => {
@@ -49,6 +50,13 @@ export default ({ criarCliente }) => {
           <Link to='/#Testemunhos'>Testemunhos</Link>
           <Link to='/#Sobre'>Sobre</Link>
           <Link to='/#Contacto'>Contacto</Link>
+          <div className="btns">
+            {
+              true ? 
+                <Button enviar >Sair</Button> :
+                <Button enviar >Entrar</Button>
+            }
+          </div>
         </ul> 
       </Navagation>
     
