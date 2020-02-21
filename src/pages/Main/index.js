@@ -21,7 +21,7 @@ export default () => {
   }
 
   function criarCliente() {
-
+    setModalCliente(true)
   }
 
   return (
@@ -40,14 +40,24 @@ export default () => {
             <div className="price">1200 AKZ</div>
           </div>
           <div className="settings">
-            <div className="enviar">Enviar</div>
-            <div className="cancel" onClick={() => setModalComida(false)}>Cancelar</div>
+            <div className="enviar btn">Enviar</div>
+            <div className="cancel btn" onClick={() => setModalComida(false)}>Cancelar</div>
           </div>
         </Encomendar>
       </Modal>
 
-      <Modal visible={true}>
-        
+      <Modal visible={modalCliente}>
+        <CriarCliente>
+          <h1 className="MainTitle"> Cria a sua conta </h1>
+          <form action="">
+            <input type="text" placeholder="Nome Completo ou da empresa" required/>
+            <input type="email" placeholder="Email" required />
+            <input type="number" placeholder="Telefone" required />
+            <input type="password" placeholder="Senha" required />
+          </form>
+          <div className="enviar btn">Enviar</div>
+          <div className="cancel btn" onClick={() => setModalCliente(false)}>Cancelar</div>
+        </CriarCliente>
       </Modal>
 
       <Header id="header" criarCliente={criarCliente} />

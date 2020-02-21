@@ -6,16 +6,7 @@ import { SmoothTransition } from './../../styles/utils';
 export const Container = styled.div`
   padding: 0;
   margin: 0;
-`;
 
-export const Encomendar = styled.div`
-  display: grid;
-  grid-template-areas: 30% 70%;
-  grid-gap: 1rem;
-  grid-template-areas: 
-    "form item"
-    "form config";
-  
   form {
     grid-area: form;
 
@@ -41,6 +32,34 @@ export const Encomendar = styled.div`
     }
   }
 
+  .btn {
+    margin-bottom: .5rem;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .enviar {
+    background: ${yellow_color};
+  }
+
+  .cancel {
+    background: ${red_color};
+  }
+`;
+
+export const Encomendar = styled.div`
+  display: grid;
+  grid-template-areas: 30% 70%;
+  grid-gap: 1rem;
+  grid-template-areas: 
+    "form item"
+    "form config";
+  
   .item {
     grid-area: item;
     text-align: center;
@@ -65,27 +84,10 @@ export const Encomendar = styled.div`
   }
 
   .settings {
-    grid-area: config;
-
-    > div {
-      margin-bottom: .5rem;
-      border-radius: 1rem;
-      padding: 1rem 2rem;
-      text-align: center;
-      color: #fff;
-      width: 100%;
-
-      &.enviar {
-        background: ${yellow_color};
-      }
-
-      &.cancel {
-        background: ${red_color};
-      }
-    }
+    grid-area: config; 
   }
 `;
 
 export const CriarCliente = styled.div`
-  
+
 `;

@@ -7,7 +7,7 @@ import { FaBars   } from 'react-icons/fa';
 
 import { Container, Navagation, HeaderContent } from './styles';
 
-export default () => {
+export default ({ criarCliente }) => {
   const [nav, setNav] = useState(false); 
 
   const hideNav = () => {
@@ -62,7 +62,7 @@ export default () => {
               amar bem, agir bem, <br />
               senão comer bem.
             </p>
-            <button>Seje o nosso cliente</button>
+            <button onClick={() => criarCliente()}>Seje o nosso cliente</button>
           </div>
         </div>
       </HeaderContent>
