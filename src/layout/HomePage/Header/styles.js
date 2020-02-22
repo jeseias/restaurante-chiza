@@ -127,6 +127,11 @@ export const Navagation = styled.nav`
         font-size: 1.3rem;
       }
 
+      button {
+        float: right;
+        margin-right: 2rem;
+      }
+
     }
 
     &.active {

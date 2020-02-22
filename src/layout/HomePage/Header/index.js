@@ -52,9 +52,9 @@ export default ({ criarCliente }) => {
           <Link to='/#Contacto'>Contacto</Link>
           <div className="btns">
             {
-              true ? 
+              false ? 
                 <Button enviar >Sair</Button> :
-                <Button enviar >Entrar</Button>
+                <Button enviar dbh>Entrar</Button>
             }
           </div>
         </ul> 
@@ -70,7 +70,7 @@ export default ({ criarCliente }) => {
               amar bem, agir bem, <br />
               senão comer bem.
             </p>
-            <button onClick={() => criarCliente()}>Seje o nosso cliente</button>
+            <Button onClick={() => criarCliente()} enviar>Seje o nosso cliente</Button>
           </div>
         </div>
       </HeaderContent>

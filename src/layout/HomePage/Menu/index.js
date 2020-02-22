@@ -7,6 +7,8 @@ import f3 from './../../../assets/images/food/f3.jpg';
 import f4 from './../../../assets/images/food/f4.jpg';
 import f5 from './../../../assets/images/food/f5.jpg';
 
+import { Button } from './../../../styles/components';
+
 import { Container, Platebox } from './styles';
 
 export default ({ encomendar }) => 
@@ -20,7 +22,7 @@ export default ({ encomendar }) =>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repudiandae architecto similique.
         </p>
         <p className="price">1200 AKZ</p>
-        <button className="btn" onClick={() => encomendar()} >Encomdar</button> 
+        <Button default onClick={() => encomendar()} >Encomdar</Button> 
       </Platebox>
       <Platebox BG={f1}>
         <div className="img" ></div>
@@ -29,7 +31,7 @@ export default ({ encomendar }) =>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repudiandae architecto similique.
         </p>
         <p className="price">1200 AKZ</p>
-        <button className="btn" onClick={() => encomendar()} >Encomdar</button>
+        <Button default onClick={() => encomendar()} >Encomdar</Button>
       </Platebox>
       <Platebox BG={f2}>
         <div className="img" ></div>
@@ -38,7 +40,7 @@ export default ({ encomendar }) =>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repudiandae architecto similique.
         </p>
         <p className="price">1200 AKZ</p>
-        <button className="btn" onClick={() => encomendar()} >Encomdar</button>
+        <Button default onClick={() => encomendar()} >Encomdar</Button>
       </Platebox>
       <Platebox BG={f3}>
         <div className="img" ></div>
@@ -47,7 +49,7 @@ export default ({ encomendar }) =>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repudiandae architecto similique.
         </p>
         <p className="price">1200 AKZ</p>
-        <button className="btn" onClick={() => encomendar()} >Encomdar</button>
+        <Button default onClick={() => encomendar()} >Encomdar</Button>
       </Platebox>
       <Platebox BG={f4}>
         <div className="img" ></div>
@@ -56,7 +58,7 @@ export default ({ encomendar }) =>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repudiandae architecto similique.
         </p>
         <p className="price">1200 AKZ</p>
-        <button className="btn" onClick={() => encomendar()} >Encomdar</button>
+        <Button default onClick={() => encomendar()} >Encomdar</Button>
       </Platebox>
       <Platebox BG={f5}>
         <div className="img" ></div>
@@ -65,7 +67,7 @@ export default ({ encomendar }) =>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repudiandae architecto similique.
         </p>
         <p className="price">1200 AKZ</p>
-        <button className="btn" onClick={() => encomendar()} >Encomdar</button>
+        <Button default onClick={() => encomendar()} >Encomdar</Button>
       </Platebox>
     </div>
   </Container>

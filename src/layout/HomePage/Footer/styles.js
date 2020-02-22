@@ -92,6 +92,11 @@ export const Top = styled.div`
     > div {
       margin: 1rem auto;
       width: 80%;
+
+      &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+        clip-path: none;
+        padding: 2rem;
+      }
     }
   }
 

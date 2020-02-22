@@ -36,6 +36,10 @@ export const Container = styled.section`
   @media ${device.tablet} {
     > div {
       grid-template-columns: 1fr;
+
+      > div, > div:nth-child(2), >div:nth-child(3) {
+        clip-path: none;
+      }
     }
   }
 

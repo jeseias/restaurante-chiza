@@ -78,11 +78,13 @@ export const Platebox = styled.div`
   }
 
   .btn {
+    display: block;
     grid-area: btn;
     border: none;
     background: ${yellow_color};
     color: ${light_gold};
     border-radius: 3rem;
+    margin: 0 auto;
   }
 
   @media ${device.laptopL} {
@@ -123,21 +125,18 @@ export const Platebox = styled.div`
   }
 
   @media ${device.tablet} {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 150px 1fr 1fr 30px 30px;
-    grid-template-areas: 
-      "img img"
-      "title title "
-      "description description "
-      "price price "
-      "btn btn ";
+    display: block;
     text-align: center;
+
+    > * {
+      margin-bottom: 1rem;
+    }
 
     .img {
       display: block; 
       margin: 0 auto; 
       width: 150px;
+      height: 150px;
     } 
 
     .title {

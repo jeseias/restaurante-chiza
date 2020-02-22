@@ -9,26 +9,25 @@ export const Button = styled.button`
   border-radius: 1rem;
   padding: .5rem 1rem;
   text-align: center;
-  color: #fff;
-  width: 100%;
+  color: #fff; 
   outline: none;
   border: none;
   border: 1.5px solid transparent;
+  backface-visibility: hidden;
 
   &:hover {
     cursor: pointer;
+    transform: scale(1.04);
     ${
-      props => props.enviar ? 
+      props => props.dbh ? 
         `background: ${dark_brown}; 
-        border-color: ${yellow_color};`  
-      :
-      `background: ${dark_brown}; 
-      border-color: ${red_color};` 
+        border-color: ${yellow_color};` : `` 
     } 
   }
 
   ${MoveElement(3)};
 
-  ${props => props.enviar && `background: ${yellow_color}`}
-  ${props => props.cancel && `background: #248bcc` } 
+  ${props => props.enviar  && `background: ${yellow_color}`}
+  ${props => props.default  && `background: ${yellow_color}`}
+  ${props => props.cancel && `background: #248bcc` }  
 `; 

@@ -65,11 +65,7 @@ export const Gallery = styled.div`
     box-shadow: 0 0 .3rem ${light_gold}; 
     border-radius: 1rem;
     width: 100%; 
-    ${SmoothTransition};
-
-    &:hover {
-      transform: scale(1.07);
-    }
+    ${SmoothTransition}; 
   } 
 
   .one {
