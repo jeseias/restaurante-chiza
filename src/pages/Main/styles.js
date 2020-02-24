@@ -104,10 +104,10 @@ export const Login = styled.div`
   form {
     display: block;
     width: 100%;
-
-    button {
-      width: 100%;
-      ${CenterElements(.5)};
-    }
+  }
+  
+  button {
+    width: 100%;
+    ${CenterElements(.5)};
   }
 `;

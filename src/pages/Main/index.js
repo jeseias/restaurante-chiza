@@ -33,7 +33,7 @@ export default () => {
 
   return (
     <Container>
-      <Modal visible={modalComida}>
+      <Modal visible={modalComida} closeModal={setModalLogin}>
         <Encomendar>
           <h1 className="MainTitle"> Emcomenda </h1>
           <div className="main">
@@ -70,15 +70,15 @@ export default () => {
         </CriarCliente>
       </Modal>
 
-      <Modal visible={modalLogin}>
+      <Modal visible={modalLogin} closeModal={setModalLogin}>
         <Login>
           <h1 className="MainTitle">Login</h1>
-          <form action="">
+          <form onSubmit="">
             <input type="text" placeholder="Seu email" />
             <input type="password" placeholder="Sua Senha" />
-            <Button enviar >Entrar</Button>
-            <Button red onClick={() => setModalLogin(false)}>Cancelar</Button>
           </form>
+          <Button enviar >Entrar</Button>
+          <Button red onClick={() => setModalLogin(false)}>Cancelar</Button>
         </Login>
       </Modal>
 
