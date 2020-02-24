@@ -30,4 +30,5 @@ export const Button = styled.button`
   ${props => props.enviar  && `background: ${yellow_color}`}
   ${props => props.default  && `background: ${yellow_color}`}
   ${props => props.cancel && `background: #248bcc` }  
+  ${props => props.red && `background: ${red_color}` }  
 `; 

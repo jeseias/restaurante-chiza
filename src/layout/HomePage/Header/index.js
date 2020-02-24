@@ -8,7 +8,7 @@ import { FaBars   } from 'react-icons/fa';
 import { Button } from './../../../styles/components';
 import { Container, Navagation, HeaderContent } from './styles';
 
-export default ({ criarCliente }) => {
+export default ({ criarCliente, fazerLogin }) => {
   const [nav, setNav] = useState(false); 
 
   const hideNav = () => {
@@ -54,7 +54,7 @@ export default ({ criarCliente }) => {
             {
               false ? 
                 <Button enviar >Sair</Button> :
-                <Button enviar dbh>Entrar</Button>
+                <Button enviar dbh onClick={() => fazerLogin()}>Entrar</Button>
             }
           </div>
         </ul> 

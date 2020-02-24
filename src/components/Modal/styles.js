@@ -23,5 +23,7 @@ export const Container = styled.div`
     box-shadow: 0 0 2rem rgba(0,0,0, .5);
     border-radius: 1rem;
     padding: 1rem;
+    width: 100%;
+    max-width: 450px;
   }
 `;

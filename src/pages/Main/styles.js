@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import { yellow_color } from './../../styles/variables';
 import { SmoothTransition } from './../../styles/utils';
+import { CenterElements } from './../../styles/mixins';
 
 export const Container = styled.div`
   padding: 0;
@@ -67,9 +68,29 @@ export const Encomendar = styled.div`
 
   .settings {
     grid-area: config; 
+    
+    button {
+      width: 100%;
+      ${CenterElements(.5)}
+    }
   }
 `;
 
 export const CriarCliente = styled.div`
+  button {
+    width: 100%;
+    ${CenterElements(.5)}
+  }
+`;
 
+export const Login = styled.div`
+  form {
+    display: block;
+    width: 100%;
+
+    button {
+      width: 100%;
+      ${CenterElements(.5)};
+    }
+  }
 `;

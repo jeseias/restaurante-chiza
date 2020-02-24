@@ -5,6 +5,11 @@ export const PositionAbsoluteCenter = (t, l) => `
   transform: translate(-50%, -50%);
 `;
 
+export const CenterElements = t => `
+  display: block;
+  margin: ${t}rem auto;
+`
+
 export const BackgroundImage = img => `
   background: url(${img}) no-repeat;
   background-size: cover;
