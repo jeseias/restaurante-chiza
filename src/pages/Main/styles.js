@@ -45,20 +45,19 @@ export const Encomendar = styled.div`
     grid-gap: 1rem;
     grid-template-areas: 
       "form item"
-      "form config";
+      "config config";
     
     .item {
       grid-area: item;
       text-align: center;
       color: #fff;
-      padding-top: 2.2rem;
 
       .img {
         width: 150px;
         height: 150px;
         border-radius: 100%;
         background: #fff;
-        ${CenterElements(.5)};
+        ${CenterElements(0)};
       }
 
       .name {
