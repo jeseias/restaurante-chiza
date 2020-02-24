@@ -35,20 +35,22 @@ export default () => {
     <Container>
       <Modal visible={modalComida}>
         <Encomendar>
-          <form action="">
-            <h1 className="MainTitle"> Emcomenda </h1>
-            <input type="text" placeholder="Seu nome" />
-            <input type="number" placeholder="Seu numero de telefone" />
-            <textarea placeholder="Ex: Bloco 2, PR-17, EN-A, AP-001"></textarea>
-          </form>
-          <div className="item">
-            <div className="img"></div>
-            <div className="name">Arroz com feijao</div>
-            <div className="price">1200 AKZ</div>
-          </div>
-          <div className="settings">
-            <Button enviar >Enviar</Button>
-            <Button red onClick={() => setModalComida(false)}>Cancelar</Button>
+          <h1 className="MainTitle"> Emcomenda </h1>
+          <div className="main">
+            <form action="">
+              <input type="text" placeholder="Seu nome" />
+              <input type="number" placeholder="Seu numero de telefone" />
+              <textarea placeholder="Ex: Bloco 2, PR-17, EN-A, AP-001"></textarea>
+            </form>
+            <div className="item">
+              <div className="img"></div>
+              <div className="name">Arroz com feijao</div>
+              <div className="price">1200 AKZ</div>
+            </div>
+            <div className="settings">
+              <Button enviar >Enviar</Button>
+              <Button red onClick={() => setModalComida(false)}>Cancelar</Button>
+            </div>
           </div>
         </Encomendar>
       </Modal>

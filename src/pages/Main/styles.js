@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { yellow_color } from './../../styles/variables';
 import { SmoothTransition } from './../../styles/utils';
 import { CenterElements } from './../../styles/mixins';
+import { device } from './../../styles/device';
 
 export const Container = styled.div`
   padding: 0;
@@ -36,42 +37,59 @@ export const Container = styled.div`
 `;
 
 export const Encomendar = styled.div`
-  display: grid;
-  grid-template-areas: 30% 70%;
-  grid-gap: 1rem;
-  grid-template-areas: 
-    "form item"
-    "form config";
-  
-  .item {
-    grid-area: item;
-    text-align: center;
-    color: #fff;
-    padding-top: 2.2rem;
 
-    .img {
-      width: 150px;
-      height: 150px;
-      border-radius: 100%;
-      background: #fff;
+  .main {
+
+    display: grid;
+    grid-template-areas: 30% 70%;
+    grid-gap: 1rem;
+    grid-template-areas: 
+      "form item"
+      "form config";
+    
+    .item {
+      grid-area: item;
+      text-align: center;
+      color: #fff;
+      padding-top: 2.2rem;
+
+      .img {
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        background: #fff;
+        ${CenterElements(.5)};
+      }
+
+      .name {
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+
+      .price {
+        font-size: 1rem;
+      }
     }
 
-    .name {
-      font-weight: bold;
-      font-size: 1.5rem;
-    }
-
-    .price {
-      font-size: 1rem;
+    .settings {
+      grid-area: config; 
+      
+      button {
+        width: 100%;
+        ${CenterElements(.5)}
+      }
     }
   }
 
-  .settings {
-    grid-area: config; 
-    
-    button {
-      width: 100%;
-      ${CenterElements(.5)}
+  @media ${device.mobileL} {
+
+    .main {
+      grid-template-columns: 1fr;
+      grid-gap: 1rem;
+      grid-template-areas: 
+        "item"
+        "form"
+        "config";
     }
   }
 `;

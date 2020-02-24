@@ -12,7 +12,6 @@ export default ({ criarCliente, fazerLogin }) => {
   const [nav, setNav] = useState(false); 
 
   const hideNav = () => {
-    console.log('James Bond')
     setNav(false);
   }
 

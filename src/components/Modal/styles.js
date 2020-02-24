@@ -18,7 +18,7 @@ export const Container = styled.div`
   top: ${props => props.visible ? '0' : '-150%'}; 
 
   .ContentDisplayed {
-    ${PositionAbsoluteCenter(30, 50)};
+    ${PositionAbsoluteCenter(40, 50)};
     background: ${dark_brown};
     box-shadow: 0 0 2rem rgba(0,0,0, .5);
     border-radius: 1rem;
