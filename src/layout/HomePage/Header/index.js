@@ -49,13 +49,13 @@ export default ({ criarCliente, fazerLogin }) => {
           <Link to='/#Testemunhos'>Testemunhos</Link>
           <Link to='/#Sobre'>Sobre</Link>
           <Link to='/#Contacto'>Contacto</Link>
-          <div className="btns">
+          {/* <div className="btns">
             {
               false ? 
                 <Button enviar >Sair</Button> :
                 <Button enviar dbh onClick={() => fazerLogin()}>Entrar</Button>
             }
-          </div>
+          </div> */}
         </ul> 
       </Navagation>
     
@@ -69,7 +69,8 @@ export default ({ criarCliente, fazerLogin }) => {
               amar bem, agir bem, <br />
               senão comer bem.
             </p>
-            <Button onClick={() => criarCliente()} enviar>Seje o nosso cliente</Button>
+            {/* <Button onClick={() => criarCliente()} enviar>Seje o nosso cliente</Button> */}
+            <a href="#clientes" onClick={() => criarCliente()}>Seje o nosso cliente</a>
           </div>
         </div>
       </HeaderContent>

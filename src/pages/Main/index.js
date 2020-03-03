@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import socketio from 'socket.io-client';
 
 import Header from './../../layout/HomePage/Header';
 import Menu from './../../layout/HomePage/Menu';
@@ -12,43 +13,87 @@ import { Button } from './../../styles/components';
 
 import Modal from './../../components/Modal';
 
-import { Container, Encomendar, CriarCliente, Login } from './styles';
+import { Container, Encomendar, CriarCliente, Login, Compra } from './styles';
 
-export default () => {
+export default ({ sendPlates }) => {
   const [modalComida, setModalComida] = useState(false);
+  const [modalCompra, setModalCompra] = useState(false);
   const [modalCliente, setModalCliente] = useState(false);
   const [modalLogin, setModalLogin] = useState(false);
 
-  function encomendarComida (item) {
-    setModalComida(true)
-  }
+  const [plate, setPlate] = useState({});
 
+  const [msg, setMsg] = useState('Vamos aguardar a resposta...');
+
+  const [plateName, setPlateName] = useState('');
+  const [number, setNumber] = useState('');
+  const [location, setLocation] = useState('');
+
+  function encomendarComida (item) {
+    setModalComida(true);
+    setPlate(item);
+  }
+  
   function criarCliente() {
     setModalCliente(true)
   }
-
+  
   function handleLogin() {
     setModalLogin(true)
+  }
+
+  async function ordering () {
+    const socket = socketio('http://localhost:8000');
+
+    socket.emit('ordering', {
+      name: plateName,
+      number,
+      location,
+      food: plate.id
+    }); 
+
+    setPlateName('');
+    setNumber('');
+    setLocation('');
+
+    setModalComida(false);
+    setModalCompra(true);
+
+    sendPlates(socket);
   }
 
   return (
     <Container>
       <Modal visible={modalComida} closeModal={setModalLogin}>
-        <Encomendar>
+        <Encomendar BG={plate.img_url}>
           <h1 className="MainTitle"> Emcomenda </h1>
           <div className="main">
             <form action="">
-              <input type="text" placeholder="Seu nome" />
-              <input type="number" placeholder="Seu numero de telefone" />
-              <textarea placeholder="Ex: Bloco 2, PR-17, EN-A, AP-001"></textarea>
+              <input 
+                type="text" 
+                value={plateName}
+                onChange={e => setPlateName(e.target.value)}
+                placeholder="Seu nome" 
+              />
+              <input 
+                type="number" 
+                value={number}
+                onChange={e => setNumber(e.target.value)}
+                placeholder="Seu numero de telefone" 
+                />
+              <textarea 
+                value={location}
+                onChange={e => setLocation(e.target.value)}
+                placeholder="Ex: Bloco 2, PR-17, EN-A, AP-001"
+              ></textarea>
             </form>
             <div className="item">
               <div className="img"></div>
-              <div className="name">Arroz com feijao</div>
-              <div className="price">1200 AKZ</div>
+              <div className="name">{plate.name}</div>
+              <div className="price">{plate.price} AKZ</div>
             </div>
             <div className="settings">
-              <Button enviar >Enviar</Button>
+              <Button enviar onClick={() => ordering()}>Enviar</Button>
               <Button red onClick={() => setModalComida(false)}>Cancelar</Button>
             </div>
           </div>
@@ -80,6 +125,13 @@ export default () => {
           <Button enviar >Entrar</Button>
           <Button red onClick={() => setModalLogin(false)}>Cancelar</Button>
         </Login>
+      </Modal> 
+
+      <Modal visible={modalCompra}>
+        <h1 className="MainTitle">Encomenda Feita</h1>
+        <Compra id="compra">
+          <h1>{msg}</h1>
+        </Compra>
       </Modal>
 
       <Header id="header" criarCliente={criarCliente} fazerLogin={handleLogin}/>

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 import { yellow_color } from './../../styles/variables';
-import { SmoothTransition } from './../../styles/utils';
-import { CenterElements } from './../../styles/mixins';
+import { SmoothTransition, CenterContent } from './../../styles/utils';
+import { CenterElements, BackgroundImage } from './../../styles/mixins';
 import { device } from './../../styles/device';
 
 export const Container = styled.div`
@@ -13,14 +13,15 @@ export const Container = styled.div`
     grid-area: form;
 
     input, textarea {
-      display: block;
-      border: none;
-      padding: .5rem;
-      width: 100%;
-      margin-bottom: 1rem;
-      outline: none;
       border-bottom: 1px solid transparent;
       ${SmoothTransition};
+      margin-bottom: 1rem;
+      padding: .7rem 1.4rem;
+      border-radius: .5rem;
+      display: block;
+      outline: none;
+      border: none;
+      width: 100%;
 
       &:focus {
         border-color: ${yellow_color};
@@ -58,6 +59,7 @@ export const Encomendar = styled.div`
         border-radius: 100%;
         background: #fff;
         ${CenterElements(0)};
+        ${props => BackgroundImage(props.BG)};
       }
 
       .name {
@@ -81,7 +83,6 @@ export const Encomendar = styled.div`
   }
 
   @media ${device.mobileL} {
-
     .main {
       grid-template-columns: 1fr;
       grid-gap: 1rem;
@@ -109,5 +110,14 @@ export const Login = styled.div`
   button {
     width: 100%;
     ${CenterElements(.5)};
+  }
+`;
+
+export const Compra = styled.div`
+  ${CenterContent};
+
+  h1 {
+    color: #fff;
+    padding: 2rem;
   }
 `;

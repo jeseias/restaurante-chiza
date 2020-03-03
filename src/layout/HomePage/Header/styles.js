@@ -199,7 +199,7 @@ export const HeaderContent = styled.div`
       margin-right: 5rem;
     }
 
-    button {
+    a:link, a:active, a:visited  {
       border: none;
       color: #fff;
       padding: 1rem 2rem;
@@ -209,11 +209,12 @@ export const HeaderContent = styled.div`
       background: ${yellow_color};
       box-shadow: 0 .5rem .6rem ${dark_brown};
       ${SmoothTransition}; 
+      text-decoration: none;
 
       &:hover {
         cursor: pointer;
         transform: scale(1.05);
-      }
+      } 
     }
   }
 
