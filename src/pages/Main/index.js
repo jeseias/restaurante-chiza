@@ -15,7 +15,7 @@ import Modal from './../../components/Modal';
 
 import { Container, Encomendar, CriarCliente, Login, Compra } from './styles';
 
-export default ({ sendPlates }) => {
+export default () => {
   const [modalComida, setModalComida] = useState(false);
   const [modalCompra, setModalCompra] = useState(false);
   const [modalCliente, setModalCliente] = useState(false);
@@ -57,9 +57,9 @@ export default ({ sendPlates }) => {
     setLocation('');
 
     setModalComida(false);
-    setModalCompra(true);
+    setModalCompra(true); 
 
-    sendPlates(socket);
+    socket.on('order-accepted', m => setMsg(`Em ${m} o seu prato chegara`))
   }
 
   return (
