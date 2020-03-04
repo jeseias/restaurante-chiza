@@ -115,9 +115,25 @@ export const Login = styled.div`
 
 export const Compra = styled.div`
   ${CenterContent};
+  flex-wrap: wrap;
+
 
   h1 {
     color: #fff;
     padding: 2rem;
+  }
+
+  #wait {
+    color: #fff;
+    
+    p {
+      margin-bottom: 1rem;
+    }
+
+    button {
+      ${CenterContent};
+      margin: .1rem auto;
+    }
+
   }
 `;

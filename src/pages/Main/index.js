@@ -24,6 +24,7 @@ export default () => {
   const [plate, setPlate] = useState({});
 
   const [msg, setMsg] = useState('Vamos aguardar a resposta...');
+  const [other, setOther] = useState(false);
 
   const [plateName, setPlateName] = useState('');
   const [number, setNumber] = useState('');
@@ -59,7 +60,20 @@ export default () => {
     setModalComida(false);
     setModalCompra(true); 
 
-    socket.on('order-accepted', m => setMsg(`Em ${m} o seu prato chegara`))
+    socket.on('order-accepted', m => {
+      setMsg(`Em ${m} o seu prato chegara`)
+
+      setTimeout(() => {
+        setOther(true);
+      }, 3000);
+    });
+  }
+  
+  function handleClose () {
+    setPlate({});
+    setMsg('Vamos aguardar a resposta...');
+    setOther(false);
+    setModalCompra(false);
   }
 
   return (
@@ -131,6 +145,14 @@ export default () => {
         <h1 className="MainTitle">Encomenda Feita</h1>
         <Compra id="compra">
           <h1>{msg}</h1>
+          {
+            other ? 
+              <div id="wait">
+                <p>Agora é so aguardar que trazemos o prato</p>
+                <Button red onClick={() => handleClose()}>Fechar</Button>
+              </div> :
+              ''
+          }
         </Compra>
       </Modal>
 
