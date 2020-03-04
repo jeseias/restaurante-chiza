@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import socketio from 'socket.io-client';
 
+import api from './../../services/api';
+
 import Header from './../../layout/HomePage/Header';
 import Menu from './../../layout/HomePage/Menu';
 import Clientes from './../../layout/HomePage/Clientes';
@@ -30,6 +32,12 @@ export default () => {
   const [number, setNumber] = useState('');
   const [location, setLocation] = useState('');
 
+  const [clientName, setClientName] = useState('');
+  const [clientType, setClientType] = useState('');
+  const [clientEmail, setClientEmail] = useState('');
+  const [clientTel, setClientTel] = useState('');
+  const [clientNota, setClientNota] = useState('');
+
   function encomendarComida (item) {
     setModalComida(true);
     setPlate(item);
@@ -41,6 +49,25 @@ export default () => {
   
   function handleLogin() {
     setModalLogin(true)
+  }
+
+  async function handleCreateClient() {
+    await api.post('/clients', {
+      name: clientName,
+      type: clientType,
+      email: clientEmail,
+      telfone: clientTel,
+      nota: clientNota
+    });
+
+    alert('Seu pedido já foi enviado. Muito em breve entraresmos em contacto consigo');
+
+    setModalCliente(false);
+
+    setClientName('');
+    setClientTel('');
+    setClientEmail('');
+    setClientNota('');
   }
 
   async function ordering () {
@@ -116,15 +143,38 @@ export default () => {
 
       <Modal visible={modalCliente}>
         <CriarCliente>
-          <h1 className="MainTitle"> Cria a sua conta </h1>
+          <h1 className="MainTitle"> Seje nosso cliente </h1>
           <form action="">
-            <input type="text" placeholder="Nome Completo ou da empresa" required/>
-            <input type="email" placeholder="Seu Email" required />
-            <input type="text" placeholder="Empresa ou Individual" required />
-            <input type="number" placeholder="Seu Telefone" required />
-            <input type="password" placeholder="Sua Senha" required />
+            <input 
+              type="text" 
+              value={clientName}
+              onChange={e => setClientName(e.target.value)}
+              placeholder="Nome Completo ou da empresa" 
+              required/>
+            <input 
+              type="email" 
+              value={clientEmail}
+              onChange={e => setClientEmail(e.target.value)}
+              placeholder="Seu Email" />
+            <input 
+              type="number" 
+              value={clientTel}
+              onChange={e => setClientTel(e.target.value)}
+              placeholder="Seu telefone" />
+            <select
+              value={clientType}
+              onChange={e => setClientType(e.target.value)}
+            >
+              <option value="individual">individual</option>
+              <option value="empresa">empresa</option>
+              <option value="motorista" >motorista</option>
+            </select>
+            <textarea 
+              value={clientNota}
+              onChange={e => setClientNota(e.target.value)}
+            ></textarea>
           </form>
-          <Button enviar >Enviar</Button>
+          <Button enviar onClick={() => handleCreateClient()}>Enviar</Button>
           <Button red onClick={() => setModalCliente(false)}>Cancelar</Button>
         </CriarCliente>
       </Modal>

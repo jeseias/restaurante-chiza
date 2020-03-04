@@ -6,7 +6,7 @@ import Person from './../../../assets/images/clientes/me3.jpg';
 
 import { Container, ClientCard } from './styles';
 
-export default () => 
+export default ({ criarCliente }) => 
   <Container>
     <h1 className="MainTitle"> Seje o nosso cliente </h1>
     <div>
@@ -16,7 +16,7 @@ export default () =>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis sed ipsa suscipit?
         </p>
-        <button> Quero Ser </button>
+        <button onClick={() => criarCliente()}> Quero Ser </button>
       </ClientCard>
       <ClientCard BG={Company}>
         <div className="img img2" /> 
@@ -24,7 +24,7 @@ export default () =>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis sed ipsa suscipit?
         </p>
-        <button> Quero Ser </button>
+        <button onClick={() => criarCliente()}> Quero Ser </button>
       </ClientCard>
       <ClientCard BG={Person}>
         <div className="img img3" /> 
@@ -32,7 +32,7 @@ export default () =>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis sed ipsa suscipit?
         </p>
-        <button> Quero Ser </button>
+        <button onClick={() => criarCliente()}> Quero Ser </button>
       </ClientCard>
     </div>
   </Container>

@@ -59,7 +59,6 @@ export const ClientCard = styled.div`
   border-radius: 2rem;
   background: #fff;
   overflow: hidden;
-  padding-bottom: 2rem;
 
   .img {
     ${props => BackgroundImage(props.BG)};
@@ -88,7 +87,7 @@ export const ClientCard = styled.div`
     top: -60px;
     text-transform: uppercase;
     font-size: 2.4rem;
-    color: ${light_gold};
+    color: #fff;
     text-shadow: 0 0 .6rem ${dark_brown};
     width: 100%;
   }
@@ -96,9 +95,8 @@ export const ClientCard = styled.div`
   p {
     color: ${dark_brown};
     position: relative;
-    top: -40px;
+    top: -20px;
     font-weight: bold;
-    font-family: 'Pacifico';
     font-size: 1.3rem;
     padding: .3rem;
   }
@@ -107,14 +105,14 @@ export const ClientCard = styled.div`
     display: block;
     margin: 0 auto;
     position: relative;
-    top: -18px;
     padding: 1rem 2rem;
     color: ${dark_brown};
     background: ${light_gold};
     border: none;
-    border-radius: 3rem;
-    font-family: 'Pacifico';
+    border-radius: 3rem; 
     box-shadow: 0 0 .3rem ${dark_brown};
+    outline: none;
+    cursor: pointer;
   }
 
   @media ${device.tablet} {

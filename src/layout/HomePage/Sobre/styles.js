@@ -23,7 +23,7 @@ export const Container = styled.section`
 `;
 
 export const SobreBox = styled.div`
-  padding: 5rem;
+  padding: 3rem;
 
   h1 {
     color: ${dark_brown};
@@ -33,8 +33,7 @@ export const SobreBox = styled.div`
 
   p {
     color: ${dark_brown};
-    font-size: 1.5rem;
-    font-family: 'Dancing Script';
+    font-size: 1rem;
     letter-spacing: 2px;
 
     b {

@@ -166,18 +166,18 @@ export const HeaderContent = styled.div`
   display: block;    
   width: 100%;
   height: 100%;
-  padding: 9rem 2rem;  
-  font-family: 'Dancing Script';  
+  padding: 12rem 2rem;  
   background: rgba(0,0,0, .4);
   
   h1 {
+    font-family: 'Dancing Script';  
     text-align: center;
     font-size: 5rem;     
     font-weight: bold;
     text-transform: uppercase;
     text-shadow: 0 0 1rem #333;
     color: #fff;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
   }
 
   > div {
@@ -192,8 +192,7 @@ export const HeaderContent = styled.div`
     height: 100%; 
 
     p {
-      font-size: 3rem; 
-      font-weight: bold;
+      font-size: 2rem;  
       text-shadow: 0 0 1rem #333;
       color: #fff; 
       margin-right: 5rem;
@@ -204,7 +203,7 @@ export const HeaderContent = styled.div`
       color: #fff;
       padding: 1rem 2rem;
       text-align: center;
-      font-size: 2rem;
+      font-size: 1.3rem;
       border-radius: 3rem;
       background: ${yellow_color};
       box-shadow: 0 .5rem .6rem ${dark_brown};
@@ -244,6 +243,11 @@ export const HeaderContent = styled.div`
         padding: .5rem 1rem;
         text-align: center;
         font-size: 1.5rem;
+      }
+
+      a {
+        display: block;
+        margin: 3rem auto -2rem auto;
       }
 
     }

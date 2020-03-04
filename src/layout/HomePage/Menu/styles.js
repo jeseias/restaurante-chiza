@@ -43,8 +43,7 @@ export const Platebox = styled.div`
     "img price btn";
   margin-bottom: 2rem; 
   background: ${light_gold};
-  padding: 2rem;
-  font-family: 'Dancing Script';
+  padding: 1rem;
   width: 100%;
   height: auto;
 
@@ -52,13 +51,13 @@ export const Platebox = styled.div`
     display: block;
     ${props => BackgroundImage(props.BG)};
     grid-area: img;
-    border-radius: 100%; 
     width: 100%;
     height: 100%;
   }
 
   .title {
     grid-area: title;
+    font-family: 'Dancing Script';
   }
 
   .description {
@@ -71,7 +70,7 @@ export const Platebox = styled.div`
   .price {
     grid-area: price;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.5rem;
     position: relative;
     top: 6px;
     text-align: center;

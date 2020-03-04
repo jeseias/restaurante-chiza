@@ -103,7 +103,6 @@ export const ClientBox = styled.div`
       color: ${dark_brown};
       font-size: 1.4em;
       padding-bottom: 1rem;
-      font-family: 'Pacifico';
     }
   } 
 

@@ -12,7 +12,7 @@ export const Container = styled.div`
   form {
     grid-area: form;
 
-    input, textarea {
+    input, textarea, select {
       border-bottom: 1px solid transparent;
       ${SmoothTransition};
       margin-bottom: 1rem;
