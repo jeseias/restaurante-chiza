@@ -15,7 +15,7 @@ import lg from './../../../assets/images/sobre/lg.jpg';
 
 export default () => {
   return (
-    <Container>
+    <Container id="sobre">
       <SobreBox>
         <h1 className="MainTitle">Restaurante Chiza</h1>
         <br/>

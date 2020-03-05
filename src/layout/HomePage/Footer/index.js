@@ -7,7 +7,7 @@ import { FaFacebookSquare, FaInstagram, FaLinkedinIn, FaPlaneDeparture,
 import { Container, Top, Bottom } from './styles';
 
 export default () => 
-  <Container>
+  <Container id="footer">
     <Top>
       <div>
         <FaPlaneDeparture size={30} className="mainIcon"/>

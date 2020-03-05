@@ -50,9 +50,7 @@ export const TestimonialBox = styled.div`
   }
 
   @media ${device.mobileL} {
-    grid-template-columns: 1fr;
-    width: 100%;
-    grid-gap: 1rem; 
+    display: block; 
   }
 `; 
 
@@ -110,4 +108,10 @@ export const ClientBox = styled.div`
   /* @media ${device.tablet} { 
     margin-bottom: 3rem; 
   } */
+
+  @media ${device.mobileL} {
+    > div {
+      margin-bottom: 5rem;
+    }
+  }
 `;

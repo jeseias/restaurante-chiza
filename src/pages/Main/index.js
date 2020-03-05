@@ -206,13 +206,13 @@ export default () => {
         </Compra>
       </Modal>
 
-      <Header id="header" criarCliente={criarCliente} fazerLogin={handleLogin}/>
-      <Menu id="menu" encomendar={encomendarComida} />
-      <Clientes id="clientes" criarCliente={criarCliente} />
-      <Planos id="planos" />
-      <Testemunhos id="testemunhos" />
-      <Sobre id="sobre" /> 
-      <Footer id="footer" /> 
+      <Header criarCliente={criarCliente} fazerLogin={handleLogin}/>
+      <Menu encomendar={encomendarComida} />
+      <Clientes criarCliente={criarCliente} />
+      <Planos />
+      <Testemunhos />
+      <Sobre /> 
+      <Footer /> 
     </Container>
   )
 }

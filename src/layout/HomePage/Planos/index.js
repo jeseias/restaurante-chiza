@@ -3,7 +3,7 @@ import React from 'react';
 import { Container, PlanoCard } from './styles';
 
 export default () => 
-  <Container>
+  <Container id="planos">
     <h1 className="MainTitle"> Super Planos </h1>
     
     <div>

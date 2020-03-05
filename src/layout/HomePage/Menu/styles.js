@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import { dark_brown, yellow_color, light_gold } from './../../../styles/variables'; 
 import { BackgroundImage } from './../../../styles/mixins'; 
+import { CenterContent } from './../../../styles/utils'; 
 import { device } from './../../../styles/device'; 
 
 export const Container = styled.section`
@@ -15,9 +16,9 @@ export const Container = styled.section`
     grid-gap: 1rem; 
   } 
 
-  @media ${device.laptop} {
-    padding: 2rem 1rem;
-  }
+  @media ${device.laptopL} {
+    padding: 2rem 1rem; 
+  } 
 
   @media ${device.tablet} {
     > div {
@@ -34,18 +35,19 @@ export const Container = styled.section`
 
 export const Platebox = styled.div`
   border-radius: .5rem;
-  display: grid;
-  grid-template-columns: 150px auto auto;  
+  display: grid;   
+  grid-template-columns: auto auto 120px; 
   grid-gap: 1rem;
   grid-template-areas: 
-    "img title title"
-    "img description description"
-    "img price btn";
+    "title title img"
+    "description description img"
+    "btn price img";
   margin-bottom: 2rem; 
   background: ${light_gold};
   padding: 1rem;
   width: 100%;
-  height: auto;
+  height: auto; 
+  text-align: left;
 
   .img {
     display: block;
@@ -53,27 +55,29 @@ export const Platebox = styled.div`
     grid-area: img;
     width: 100%;
     height: 100%;
+    border-radius: 100%;
   }
 
   .title {
     grid-area: title;
-    font-family: 'Dancing Script';
+    font-family: 'Dancing Script';  
+    text-align: left;
   }
 
   .description {
-    grid-area: description;
-    text-align: right;
+    grid-area: description; 
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: bold; 
   }
 
   .price {
     grid-area: price;
     font-weight: bold;
-    font-size: 1.5rem;
-    position: relative;
-    top: 6px;
+    font-size: 1.3rem;
+    padding: .4rem;
+    position: relative; 
     text-align: center;
+    ${CenterContent};
   }
 
   .btn {
@@ -86,9 +90,7 @@ export const Platebox = styled.div`
     margin: 0 auto;
   }
 
-  @media ${device.laptopL} {
-    grid-template-columns: 120px auto auto;
-    padding: 1rem;
+  @media ${device.laptopL} {  
 
     .title {
       font-size: 1.9rem;  
@@ -105,21 +107,31 @@ export const Platebox = styled.div`
   }
 
   @media ${device.laptop} {
-    grid-gap: 0;
-    grid-gap: .3rem;
-    grid-template-areas: 
-      "img title title"
-      "img description description"
-      "img price price"
-      "img btn btn";
+    display: block;   
+    text-align: center;
+
+    .img {
+      border-radius: 100%;
+      width: 150px;
+      height: 150px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .title {
+      text-align: center;
+    }
 
     .price {
-      text-align: right;
+      text-align: center;
+      justify-content: center;
     }
 
     .btn {
       margin-top: 1rem;
       padding: .5rem .5rem;
+      column-span: 2 / 5;
+      width: 100%;
     }
   }
 

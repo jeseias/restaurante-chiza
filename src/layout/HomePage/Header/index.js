@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 
 import bg from './../../../assets/images/bg/bg1.jpg';
  
@@ -8,7 +8,7 @@ import { FaBars   } from 'react-icons/fa';
 import { Button } from './../../../styles/components';
 import { Container, Navagation, HeaderContent } from './styles';
 
-export default ({ criarCliente, fazerLogin }) => {
+export default ({ criarCliente }) => {
   const [nav, setNav] = useState(false); 
 
   const hideNav = () => {
@@ -23,10 +23,12 @@ export default ({ criarCliente, fazerLogin }) => {
     nav ? 
       document.querySelector('#header .nav-bar').classList.add('active') : 
       document.querySelector('#header .nav-bar').classList.remove('active') 
+
+    window.onscroll = () => setNav(false);  
   }, [nav]);
 
   function navLinks(e) {
-    e.target !== <a href="#header">df</a> ? setNav(false) : setNav(true)
+    setNav(false)
   }
 
   return (
@@ -43,12 +45,48 @@ export default ({ criarCliente, fazerLogin }) => {
           <FaBars size={30} className="nav-bar" onClick={() => setNav(!nav)} />
         </div>
         <ul onClick={e => navLinks(e)}>
-          <Link to='/#Menu'>Menu</Link>
-          <Link to='/#Clientes'>Clientes</Link>
-          <Link to='/#Planos'>Planos</Link>
-          <Link to='/#Testemunhos'>Testemunhos</Link>
-          <Link to='/#Sobre'>Sobre</Link>
-          <Link to='/#Contacto'>Contacto</Link>
+          <Link 
+            to='menu'
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration= {500}> Menu </Link>
+          <Link
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration= {500}
+            to='clientes'>Clientes</Link>
+          <Link 
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration= {500}
+            to='planos'>Planos</Link>
+          <Link 
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration= {500}
+            to='testemunhos'>Testemunhos</Link>
+          <Link 
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration= {500}
+            to='sobre'>Sobre</Link>
+          <Link 
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration= {500}
+            to='footer'>Contacto</Link>
           {/* <div className="btns">
             {
               false ? 

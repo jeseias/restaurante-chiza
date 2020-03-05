@@ -7,7 +7,7 @@ import Person from './../../../assets/images/clientes/me3.jpg';
 import { Container, ClientCard } from './styles';
 
 export default ({ criarCliente }) => 
-  <Container>
+  <Container id="clientes">
     <h1 className="MainTitle"> Seje o nosso cliente </h1>
     <div>
       <ClientCard BG={Taxi}>
