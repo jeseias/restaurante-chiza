@@ -35,7 +35,7 @@ export default () => {
   const [location, setLocation] = useState('');
 
   const [clientName, setClientName] = useState('');
-  const [clientType, setClientType] = useState('');
+  const [clientType, setClientType] = useState('individual');
   const [clientEmail, setClientEmail] = useState('');
   const [clientTel, setClientTel] = useState('');
   const [clientNota, setClientNota] = useState('');
@@ -59,40 +59,50 @@ export default () => {
   }
 
   async function handleCreateClient() {
-    await api.post('/clients', {
-      name: clientName,
-      type: clientType,
-      email: clientEmail,
-      telfone: clientTel,
-      nota: clientNota
-    });
 
-    alert('Seu pedido já foi enviado. Muito em breve entraresmos em contacto consigo');
+    if(clientName && clientTel && clientEmail && clientNota) {
+      await api.post('/clients', {
+        name: clientName,
+        type: clientType,
+        email: clientEmail,
+        telfone: clientTel,
+        nota: clientNota
+      });
 
-    setModalCliente(false);
-
-    setClientName('');
-    setClientTel('');
-    setClientEmail('');
-    setClientNota('');
-
-    io.emit('new-user');
+      alert('Seu pedido já foi enviado. Muito em breve entraresmos em contacto consigo');
+  
+      setModalCliente(false);
+  
+      setClientName('');
+      setClientTel('');
+      setClientEmail('');
+      setClientNota('');
+  
+      io.emit('new-user');
+    } else {
+      alert("Deves providenciar estes campo nome, email, telefone e uma nota");
+    }
   }
 
   async function ordering () {
-    io.emit('ordering', {
-      name: plateName,
-      number,
-      location,
-      food: plate.id
-    }); 
 
-    setPlateName('');
-    setNumber('');
-    setLocation('');
-
-    setModalComida(false);
-    setModalCompra(true); 
+    if(plateName && location && number) {
+      io.emit('ordering', {
+        name: plateName,
+        number,
+        location,
+        food: plate.id
+      }); 
+  
+      setPlateName('');
+      setNumber('');
+      setLocation('');
+  
+      setModalComida(false);
+      setModalCompra(true); 
+    } else {
+      alert('Seu nome, onde vives, e a sua localizão é obrigatorio');
+    }
 
     io.on('order-accepted', m => {
       setMsg(`Em ${m} o seu prato chegara`)
