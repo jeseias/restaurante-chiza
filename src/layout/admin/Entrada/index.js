@@ -1,42 +1,47 @@
 import React, { useEffect, useState } from 'react';
-import socketio from 'socket.io-client';
 
 import api from './../../../services/api';
 
-import { Container, Encomenda, Response } from './styles';
+import { Container, Encomenda, Response, JaFeito } from './styles';
 import { Button } from './../../../styles/components';
 
-export default () => {
+export default ({ visible, io }) => {
   const [plates, setPlates] = useState([]);
   const [response, setResponse] = useState(false);
   const [time, setTime] = useState('');
-  const [io, setIo] = useState({});
   const [ci, setCi] = useState('');
+  const [cp, setCp] = useState();
 
   useEffect(() => {
     getOrders();
-  }, [])
+  }, [io])
 
   useEffect(()=> {
-    const socket = socketio('http://localhost:8000');
-    socket.on('new-order', () => getOrders(socket)); 
-    setIo(socket); 
-  }, [plates]);
-
-  async function getOrders(socket) {
-    const foods = await api.get('http://localhost:8000/orders');
+    io.on('new-order', () => getOrders(io)); 
+  }, [io]);
+    
+  async function getOrders() {
+    const foods = await api.get('/orders');
     setPlates(foods.data.data); 
   }
 
-  function handleResponse() {
-    io.emit('order-accepted', {time, ci});
+  async function handleResponse() {
+    io.emit('order-accepted', {time, ci, cp}); 
+
     setTime('');
     setCi('');
     setResponse(false);
+
+    getOrders();
+  }
+
+  async function handleDeleteOrder(id) {
+    io.emit('delete-order', {id});
+    getOrders();
   }
 
   return (
-    <Container>
+    <Container visible={visible}>
       <Response visible={response}>
         <h3>Quantos tempo levara </h3>
         <input 
@@ -48,29 +53,46 @@ export default () => {
           enviar 
           onClick={() => handleResponse()}>Enviar</Button> 
       </Response>
-      <h1>Encomendas feitas</h1>  
       {
-        plates.map(plate => 
-          <Encomenda BG={plate.food.img_url} key={plate._id}>
-            <div id="img" /> 
-            <b id="name">{plate.food.name}</b>
-            <p id="price">{plate.food.price} AkZ</p>
-            <p id="location">{plate.location}</p>
-            <p id="pname">{plate.name}</p>
-            <p id="pno">{plate.number}</p>
-            <br/>
-            <div id="btns">
-              <Button 
-                enviar 
-                onClick={() =>{ 
-                  setResponse(true)
-                  setCi(plate.userid)
-                }}
-              >Aceitar</Button>
-              <Button red>Rejeitar</Button>
-            </div>
-          </Encomenda>
-        )
+        plates.map(plate => (
+          !plate.state ? 
+          <Encomenda BG={plate.food.img_url} key={plate._id} className="MainElements">
+              <h1>Encomendas Recebidas</h1>  
+              <div id="img" /> 
+              <b id="name">{plate.food.name}</b>
+              <p id="price">{plate.food.price} AkZ</p>
+              <p id="location">{plate.location}</p>
+              <p id="pname">{plate.name}</p>
+              <p id="pno">{plate.number}</p>
+              <br/>
+              <div id="btns">
+                <Button 
+                  enviar 
+                  onClick={() =>{ 
+                    setResponse(true)
+                    setCi(plate.userid)
+                    setCp(plate._id)
+                  }}
+                >Aceitar</Button>
+                <Button red>Rejeitar</Button>
+              </div>
+            </Encomenda> :
+            <JaFeito className="MainElements" BG={plate.food.img_url} >
+              <h1>Encomendas Vistas</h1> 
+              <div id="img" /> 
+              <b id="name">{plate.food.name}</b>
+              <p id="price">{plate.food.price} AkZ</p>
+              <p id="location">{plate.location}</p>
+              <p id="pname">{plate.name}</p>
+              <p id="pno">{plate.number}</p>
+              <br/>
+              <div id="btns">
+                <Button red onClick={() => {
+                  handleDeleteOrder(plate._id)
+                }}>Eliminar</Button>
+              </div>
+            </JaFeito>
+        ))
       }  
     </Container>
   )

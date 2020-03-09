@@ -1,13 +1,15 @@
 import styled from 'styled-components';
 
 import { dark_brown } from './../../../styles/variables';
-import { CenterContent } from './../../../styles/utils';
+import { CenterContent, SmoothTransition } from './../../../styles/utils';
 
 export const Container = styled.div`
   background: ${dark_brown};
   ${CenterContent};
+  ${SmoothTransition};
   width: 100vw;
   height: 100vh;
+  z-index: 100000;
   ${props => {
     if(!props.visible) {
       return `

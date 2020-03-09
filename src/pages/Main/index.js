@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import socketio from 'socket.io-client';
 
 import api from './../../services/api';
@@ -25,6 +25,8 @@ export default () => {
 
   const [plate, setPlate] = useState({});
 
+  const [io, setIo] = useState({});
+
   const [msg, setMsg] = useState('Vamos aguardar a resposta...');
   const [other, setOther] = useState(false);
 
@@ -37,6 +39,11 @@ export default () => {
   const [clientEmail, setClientEmail] = useState('');
   const [clientTel, setClientTel] = useState('');
   const [clientNota, setClientNota] = useState('');
+
+  useEffect(() => {
+    const socket = socketio('http://localhost:8000');
+    setIo(socket);
+  }, [])
 
   function encomendarComida (item) {
     setModalComida(true);
@@ -68,12 +75,12 @@ export default () => {
     setClientTel('');
     setClientEmail('');
     setClientNota('');
+
+    io.emit('new-user');
   }
 
   async function ordering () {
-    const socket = socketio('http://localhost:8000');
-
-    socket.emit('ordering', {
+    io.emit('ordering', {
       name: plateName,
       number,
       location,
@@ -87,7 +94,7 @@ export default () => {
     setModalComida(false);
     setModalCompra(true); 
 
-    socket.on('order-accepted', m => {
+    io.on('order-accepted', m => {
       setMsg(`Em ${m} o seu prato chegara`)
 
       setTimeout(() => {
