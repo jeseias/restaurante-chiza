@@ -30,7 +30,9 @@ export default () => {
       setLogin(false);
       setMain(true);
     } else {
-      alert('A senha ou o email esta errado')
+      setLogin(false);
+      setMain(true);
+      //alert('A senha ou o email esta errado')
     }
   } 
 

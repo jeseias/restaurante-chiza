@@ -105,12 +105,20 @@ export default () => {
     }
 
     io.on('order-accepted', m => {
-      setMsg(`Em ${m} o seu prato chegara`)
+      setMsg(`Em ${m} minutos o seu prato chegara`);
 
       setTimeout(() => {
         setOther(true);
       }, 3000);
     });
+
+    io.on('your-order-was-canceled', m => {
+      setMsg(`${m}`)
+
+      setTimeout(() => {
+        setOther(true);
+      }, 2500);
+    })
   }
   
   function handleClose () {
@@ -215,7 +223,6 @@ export default () => {
           {
             other ? 
               <div id="wait">
-                <p>Agora é so aguardar que trazemos o prato</p>
                 <Button red onClick={() => handleClose()}>Fechar</Button>
               </div> :
               ''

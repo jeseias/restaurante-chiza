@@ -16,6 +16,41 @@ export const Container = styled.div`
     }
   }}
 
+  .Message {
+    width: 90%;
+    max-width: 450px; 
+    padding: 1rem;
+    border-radius: 2%;
+    background: ${dark_brown};
+    color: #fff;
+    z-index: 100;
+    text-align: center;
+
+    textarea {
+      display: block;
+      height: 200px;
+      max-height: 100px;
+    }
+
+    button {
+      margin: 1rem;
+    }
+
+    input, textarea {
+      border: 1px solid ${dark_brown};
+      padding: .3rem .7rem;
+      width: 97%;
+      margin: 2rem auto;
+      outline: none;
+      font-size: 1.5rem;
+      text-align: center;
+
+      &:focus {
+        border-color: ${yellow_color};
+      }
+    }
+  }
+
   .MainElements {
     display: block;
     text-align: center;
@@ -72,29 +107,13 @@ export const JaFeito = styled.div`
   }
 `;
 
-export const Response = styled.div`
-  width: 90%;
-  max-width: 450px; 
-  padding: 1rem;
-  border-radius: 2%;
+export const Response = styled.div` 
   ${PositionAbsoluteCenter(-100, 50)}
-  ${props => props.visible ? `${PositionAbsoluteCenter(30,50)}; position: fixed` : ''};
-  background: ${dark_brown};
-  color: #fff;
-  z-index: 100;
-  text-align: center;
-
-  input {
-    border: 1px solid ${dark_brown};
-    padding: .3rem .7rem;
-    width: 97%;
-    margin: 2rem auto;
-    outline: none;
-    font-size: 1.5rem;
-    text-align: center;
-
-    &:focus {
-      border-color: ${yellow_color};
-    }
-  }
+  ${props => props.visible ? `${PositionAbsoluteCenter(30,50)}; position: fixed` : ''}; 
 `;
+
+export const Rejection = styled.div` 
+  ${PositionAbsoluteCenter(-100, 50)}
+  ${props => props.visible ? `${PositionAbsoluteCenter(30,50)}; position: fixed` : ''}; 
+`;
+

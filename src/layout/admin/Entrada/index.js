@@ -2,13 +2,15 @@ import React, { useEffect, useState } from 'react';
 
 import api from './../../../services/api';
 
-import { Container, Encomenda, Response, JaFeito } from './styles';
+import { Container, Encomenda, Response, JaFeito, Rejection } from './styles';
 import { Button } from './../../../styles/components';
 
 export default ({ visible, io }) => {
   const [plates, setPlates] = useState([]);
   const [response, setResponse] = useState(false);
+  const [rejection, setRejection] = useState(false);
   const [time, setTime] = useState('');
+  const [msg, setMsg] = useState('');
   const [ci, setCi] = useState('');
   const [cp, setCp] = useState();
 
@@ -40,9 +42,15 @@ export default ({ visible, io }) => {
     getOrders();
   }
 
+  function handleRejection() {
+    io.emit('cant-order', {ci, msg})
+    setRejection(false);
+    handleDeleteOrder(cp);
+  }
+
   return (
     <Container visible={visible}>
-      <Response visible={response}>
+      <Response visible={response} className="Message">
         <h3>Quantos tempo levara </h3>
         <input 
           type="number" 
@@ -52,7 +60,29 @@ export default ({ visible, io }) => {
         <Button 
           enviar 
           onClick={() => handleResponse()}>Enviar</Button> 
+        <Button 
+          red 
+          onClick={() =>{
+            setTime('')
+            setResponse(false)
+          }}>Cancelar</Button> 
       </Response>
+      <Rejection visible={rejection} className="Message">
+        <h3>Quantos tempo levara </h3>
+        <textarea 
+          value={msg}
+          onChange={e => setMsg(e.target.value)}
+          placeholder="A sua mensagen" ></textarea> 
+        <Button 
+          enviar 
+          onClick={() => handleRejection()}>Enviar</Button>
+        <Button 
+          red 
+          onClick={() => {
+            setRejection(false)
+            setMsg('');
+          }}>Cancelar</Button>
+      </Rejection>
       {
         plates.map(plate => (
           !plate.state ? 
@@ -74,7 +104,11 @@ export default ({ visible, io }) => {
                     setCp(plate._id)
                   }}
                 >Aceitar</Button>
-                <Button red>Rejeitar</Button>
+                <Button red onClick={() => {
+                  setRejection(true)
+                  setCi(plate.userid)
+                  setCp(plate._id)
+                }}>Rejeitar</Button>
               </div>
             </Encomenda> :
             <JaFeito className="MainElements" BG={plate.food.img_url} >
